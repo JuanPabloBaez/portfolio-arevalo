@@ -14,12 +14,11 @@ import Galeria from './components/galeria';
 
 function App() {
 const [images, setImages] = useState([])
-
+const [dark, setDark] = useState(false)
 useEffect(()=>{
   async function getData () {
     try{
       client.getEntries().then((response)=> {
-        console.log(response)
         setImages(response.items.filter((item)=> item.sys.contentType.sys.id="image"))
         return
       })
@@ -32,15 +31,13 @@ useEffect(()=>{
 },[])
 
 console.log(images)
-
-
   return (
     <div className="App">
       <Router>
         <Nav/>
         <Routes>
           <Route path="/" element={<Home img={images.filter((item)=>item.fields.categoria==="home")} />} />
-          <Route path="/bio" element={<Bio />}/>            
+          <Route path="/bio" element={<Bio img={images.filter((item)=>item.fields.categoria==="bio")} />}/>            
           <Route path="/musica" element={<Musica />}/ >            
           <Route path="/docencia" element={<Docencia />}/>            
           <Route path="/conciertos" element={<Conciertos />}/>            

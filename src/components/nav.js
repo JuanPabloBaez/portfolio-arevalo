@@ -7,7 +7,7 @@ function Nav() {
 
   return (
     <div className='nav-bar'>
-      <Link to="/"><img className='logo' src="/logo-nav.svg" alt="image" /></Link>
+      <Link to="/"><img className='logo' src="/logo-nav-white.svg" alt="image" /></Link>
       <div className='nav-links'>
         <Link to="/bio">BIO</Link>
         <Link to="/musica">MUSICA</Link>

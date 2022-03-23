@@ -3,10 +3,12 @@ import React from 'react';
 
 
 function Nav() {
-  return (
-    <div>Nav
 
-      <div>
+
+  return (
+    <div className='nav-bar'>
+      <Link to="/"><img className='logo' src="/logo-nav.svg" alt="image" /></Link>
+      <div className='nav-links'>
         <Link to="/bio">BIO</Link>
         <Link to="/musica">MUSICA</Link>
         <Link to="/docencia">Docencia</Link>

@@ -1,0 +1,32 @@
+
+.nav-bar{
+    border: 4px solid yellow;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+    background: none;
+    
+    .logo {
+        object-fit: contain;
+        height: 8vh;
+        
+    }
+    a {
+        height: fit-content;
+        display: inline;
+        width: fit-content;
+        text-decoration: none;
+        color: currentColor;
+    }
+    .nav-links {
+        width: fit-content;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+       
+        
+    }
+
+}

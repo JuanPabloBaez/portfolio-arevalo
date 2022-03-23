@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import {client} from './client';
-import './App.css';
+import './styles/App.css';
 
 import Home from './components/home';
 import Nav from './components/nav';

@@ -1,19 +1,28 @@
-import React from 'react'
-import {useRecoilState} from 'recoil';
-import {darkState} from '../App.js'
+import React, { useEffect} from 'react'
+import {useRecoilState, useRecoilValue} from 'recoil';
+import {darkState, imgState} from '../App.js'
 
 
-function Bio({img}) {
-  const [dark, setDark] = useRecoilState(darkState)
+function Bio() {
+  const [dark, setDark] = useRecoilState(darkState);
+  const bioPic = useRecoilValue(imgState).filter((item)=>item.fields.categoria==="bio")[0].fields.imagen.fields.file.url
+  
 
- 
-  setDark(true)
+  useEffect(async ()=>{
+    setDark(true)
+   },[])
+
+   
+
+
+
   return (
     <div className='bio-body'>
       <h1>Biografia</h1>
-      <img className="bio-photo"  src={img[0].fields.imagen.fields.file.url}  alt="Retrato de Alejandro Arévalo"/>
-      <p>Comienza a temprana edad sus estudios musicales con la guitarra clásica y folclórica. En el año 1999 estudia Violoncello en la academia de música Mozart, San Felipe. Luego en el año 2000 integra la Escuela de Jazz de San Felipe, interpretando el bajo eléctrico, instrumento que  el  año 2003  estudiaría en  la escuela  de música  SCD, Santiago. Período en el  cual  estudia composición con el maestro  Raúl Céspedes, así como también se desarrolla   como músico de sesión en  diversas aristas musicales, trabajando para la productora R&S comunicaciones.
- En el año 2005 comienza sus estudios de piano clásico en el conservatorio Izidor   Handler,  Viña  del  Mar,  estudiando  con el  maestro  Aníbal  Correa Blanco y Fernando Ulloa Fonseca. De forma paralela estudia la Licenciatura en Educación en la Universidad de Playa Ancha.
+      <img className="bio-photo"  src={bioPic}  alt="Retrato de Alejandro Arévalo"/>
+
+      <p>Comienza a temprana edad sus estudios musicales con la guitarra clásica y folclórica. En el año 1999 estudia Violoncello en la academia de música Mozart, San Felipe. Luego en el año 2000 integra la Escuela de Jazz de San Felipe, interpretando el bajo eléctrico, instrumento que el año 2003 estudiaría en la escuela de música SCD, Santiago. Período en el cual estudia composición con el maestro Raúl Céspedes, así como también se desarrolla como músico de sesión en diversas aristas musicales, trabajando para la productora R&S comunicaciones.
+En el año 2005 comienza sus estudios de piano clásico en el conservatorio Izidor Handler, Viña del Mar, estudiando con el maestro Aníbal Correa Blanco y Fernando Ulloa Fonseca. De forma paralela estudia la Licenciatura en Educación en la Universidad de Playa Ancha.
 En el año 2007 comienza a hacer clases en la Universidad de Valparaíso en las cátedras de piano complementario, teoría del piano, piano popular y piano clásico.
 En este período forma un dúo de piano y violín, junto al músico José Tomás Rives y comienza a componer su primer disco titulado “Música de Cámara”, grabado en el año 2009, Valparaíso, en la sala Musicámara de la Universidad de Valparaíso, editado en el año 2011. 
 En el año 2014 comienza a hacer clases en la Universidad Santo Tomás en las cátedras de Eufonía y Pedagogía Musical, paralelo a esto trabaja en la Escuela de Lutheria Jorge Ball, en la ciudad de Osorno.

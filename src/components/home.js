@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Navigation} from "swiper";
-import {useRecoilState} from 'recoil';
-import {darkState} from '../App.js'
+import {useRecoilState, useRecoilValue} from 'recoil';
+import {darkState, imgState} from '../App.js'
 import 'swiper/css';
 import "swiper/css/effect-fade";
 
 
+function Home() {
+  const [dark, setDark] = useRecoilState(darkState);
+  const homePics = useRecoilValue(imgState).filter((item)=>item.fields.categoria==="home")
 
-function Home({img}) {
-  const [dark, setDark] = useRecoilState(darkState)
-  
-  setDark(false)
+
+
+ useEffect(()=>{
+  setDark(false);
+ },[])
+
 
   return (
     <div className='home-body'>
@@ -32,7 +37,7 @@ function Home({img}) {
         className="mySwiper"
         modules={[EffectFade, Autoplay, Navigation]} 
         >
-        {img.map((item, index)=>{
+        {homePics.map((item, index)=>{
           return <SwiperSlide key={index}>
             <img className="slide-photo"  src={item.fields.imagen.fields.file.url}  alt="Página web de Alejandro Arévalo"/>
           </SwiperSlide>

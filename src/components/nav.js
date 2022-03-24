@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import {useRecoilValue} from 'recoil';
 import {darkState} from '../App.js'
@@ -6,9 +6,9 @@ import {darkState} from '../App.js'
 
 
 function Nav() {
-  const darkMode= useRecoilValue(darkState);
+    const darkMode= useRecoilValue(darkState);
+   
 
-console.log(darkMode)
   return (
     <div className='nav-bar'>
       <Link to="/"><img className='logo' src={darkMode===false? "/logo-nav-white.svg":"/logo-nav.svg"} alt="logo navegación" /></Link>

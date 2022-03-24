@@ -48,6 +48,10 @@
           align-items: center;
 }
 
+.nav-bar .dark a {
+  color: black;
+}
+
 header {
   width: 100%;
   height: 80vh;

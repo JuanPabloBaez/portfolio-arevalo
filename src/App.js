@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import {client} from './client';
+import {atom} from 'recoil';
 import './styles/App.css';
 
 import Home from './components/home';
@@ -11,10 +12,24 @@ import Docencia from './components/docencia';
 import Conciertos from './components/conciertos';
 import Galeria from './components/galeria';
 
+ export const darkState = atom({
+  key: "dark",
+  default: false ,
+})
+// const imgState = atom({
+//   key: "images",
+//   default: [],
+// })
 
 function App() {
-const [images, setImages] = useState([])
-const [dark, setDark] = useState(false)
+const [images, setImages] = useState([]);
+
+
+ 
+ 
+
+
+
 useEffect(()=>{
   async function getData () {
     try{
@@ -27,10 +42,11 @@ useEffect(()=>{
     }
   };
   getData();
-
+  
 },[])
 
-console.log(images)
+
+
   return (
     <div className="App">
       <Router>

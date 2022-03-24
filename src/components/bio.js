@@ -1,13 +1,17 @@
 import React from 'react'
+import {useRecoilState} from 'recoil';
+import {darkState} from '../App.js'
+
 
 function Bio({img}) {
+  const [dark, setDark] = useRecoilState(darkState)
 
-console.log(img)
-
+ 
+  setDark(true)
   return (
     <div className='bio-body'>
       <h1>Biografia</h1>
-      <img className="bio-photo"  src={img[0].fields.imagen.fields.file.url}  alt="home picture"/>
+      <img className="bio-photo"  src={img[0].fields.imagen.fields.file.url}  alt="Retrato de Alejandro Arévalo"/>
       <p>Comienza a temprana edad sus estudios musicales con la guitarra clásica y folclórica. En el año 1999 estudia Violoncello en la academia de música Mozart, San Felipe. Luego en el año 2000 integra la Escuela de Jazz de San Felipe, interpretando el bajo eléctrico, instrumento que  el  año 2003  estudiaría en  la escuela  de música  SCD, Santiago. Período en el  cual  estudia composición con el maestro  Raúl Céspedes, así como también se desarrolla   como músico de sesión en  diversas aristas musicales, trabajando para la productora R&S comunicaciones.
  En el año 2005 comienza sus estudios de piano clásico en el conservatorio Izidor   Handler,  Viña  del  Mar,  estudiando  con el  maestro  Aníbal  Correa Blanco y Fernando Ulloa Fonseca. De forma paralela estudia la Licenciatura en Educación en la Universidad de Playa Ancha.
 En el año 2007 comienza a hacer clases en la Universidad de Valparaíso en las cátedras de piano complementario, teoría del piano, piano popular y piano clásico.

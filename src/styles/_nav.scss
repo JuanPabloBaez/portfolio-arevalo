@@ -10,7 +10,6 @@
     background: none;
     z-index: 10;
     color: white;
-    
     .logo {
         object-fit: contain;
         height: 4vh;  
@@ -26,9 +25,10 @@
         width: fit-content;
         gap: 10px;
         display: flex;
-        align-items: center;
-       
-        
+        align-items: center; 
+    }
+    .dark a{
+        color: black;
     }
 
 }

@@ -20,18 +20,38 @@ export const imgState = atom({
   key: "images",
   default: [],
 })
+export const conciertoState = atom({
+  key: "conciertos",
+  default: [],
+})
+export const biografiaState = atom({
+  key: "biografia",
+  default: [],
+})
 
 function App() {
 const [images, setImages] = useRecoilState(imgState);
+const [conciertos, setConciertos] = useRecoilState(conciertoState);
+const [biografia, setBiografia] = useState([]);
+
 
 useEffect(()=>{
   async function getData () {
     try{
-      client.getEntries().then((response)=> {
-          let pictures = response.items.filter((item)=> item.sys.contentType.sys.id="imagen");
-          setImages(pictures)
-          console.log(response.items)
-          console.log(pictures)
+      client.getEntries()
+        .then((response)=> {
+            const data = response.items;
+            setImages(data.filter(item=> item.sys.contentType.sys.id==="imagen")); 
+            const bio = data.filter(item=> item.sys.contentType.sys.id==="biografia")[0];
+            setBiografia(bio);
+            const getConciertos= data.filter(item=> item.sys.contentType.sys.id==="concierto").sort(function(a,b){
+              return new Date(b.fields.fecha) - new Date(a.fields.fecha);
+            });
+            setConciertos(getConciertos);
+
+
+            
+            console.log(getConciertos)
         return
       })
     }catch(error){
@@ -42,15 +62,15 @@ useEffect(()=>{
   
 },[])
 
-
+console.log(conciertos)
 
   return (
     <div className="App">
       <Router>
         <Nav/>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/bio" element={<Bio  />}/>            
+          <Route exact path="/" element={<Home />} />
+          <Route path="/bio" element={<Bio bio={biografia}/>}/>            
           <Route path="/musica" element={<Musica />}/ >            
           <Route path="/docencia" element={<Docencia />}/>            
           <Route path="/conciertos" element={<Conciertos />}/>            

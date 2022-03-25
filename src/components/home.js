@@ -12,7 +12,6 @@ function Home() {
   const homePics = useRecoilValue(imgState).filter((item)=>item.fields.categoria==="home")
 
 
-
  useEffect(()=>{
   setDark(false);
  },[])
@@ -39,7 +38,7 @@ function Home() {
         >
         {homePics.map((item, index)=>{
           return <SwiperSlide key={index}>
-            <img className="slide-photo"  src={item.fields.imagen.fields.file.url}  alt="Página web de Alejandro Arévalo"/>
+            <img className="slide-photo"  src={item.fields.img.fields.file.url}  alt="Página web de Alejandro Arévalo"/>
           </SwiperSlide>
         })}
         </Swiper>

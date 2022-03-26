@@ -20,8 +20,7 @@ function Bio() {
     }
    setBio()
    },[])
-   
-   console.log(bioText)
+
 
   return (
     <div className='bio-body'>

@@ -14,10 +14,10 @@ function Docencia() {
   const docencia =useRecoilValue(docenciaState);
 
   
-  useEffect(async ()=>{
+  useEffect( ()=>{
     setDark(true);
     return
-   },[])
+   },[setDark])
 
  console.log()
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {useRecoilState, useRecoilValue} from 'recoil';
+import {useRecoilState} from 'recoil';
 import {darkState} from '../App.js';
 
 function Galeria() {
@@ -11,7 +11,8 @@ function Galeria() {
       return
     }
    setGaleria()
-   },[])
+   },[setDark])
+   
   return (
     <div className='galeria-body'>Galeria</div>
   )

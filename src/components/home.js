@@ -15,7 +15,7 @@ function Home() {
 
  useEffect(()=>{
   setDark(false);
- },[])
+ },[setDark])
 
 
   return (

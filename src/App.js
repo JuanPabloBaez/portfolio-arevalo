@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import {client} from './client';
-import {atom,useRecoilState, useRecoilValue} from 'recoil';
+import {atom,useRecoilState} from 'recoil';
 
 
 import './styles/App.css';
@@ -73,7 +73,7 @@ useEffect(()=>{
   };
   getData();
   
-},[])
+},[setBiografia,setConciertos,setDocencia, setImages])
 
 
 

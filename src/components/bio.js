@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect} from 'react';
 import {useRecoilState, useRecoilValue} from 'recoil';
 import {darkState, biografiaState} from '../App.js';
 import RichText from '@madebyconnor/rich-text-to-jsx';
@@ -19,7 +19,7 @@ function Bio() {
       return
     }
    setBio()
-   },[])
+   },[setDark])
 
 
   return (

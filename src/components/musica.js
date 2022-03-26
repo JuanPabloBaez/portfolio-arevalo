@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {useRecoilState, useRecoilValue} from 'recoil';
+import {useRecoilState} from 'recoil';
 import {darkState} from '../App.js';
 
 
@@ -12,7 +12,7 @@ function Musica() {
       return
     }
    setMusica()
-   },[])
+   },[setDark])
 
   return (
     <div className='musica-body'>Musica</div>

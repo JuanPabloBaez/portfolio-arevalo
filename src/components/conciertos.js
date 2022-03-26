@@ -7,10 +7,10 @@ function Conciertos() {
   const [dark, setDark] = useRecoilState(darkState);
   const listaConciertos = useRecoilValue(conciertoState);
   
-  useEffect(async ()=>{
+  useEffect( ()=>{
     setDark(false);
     return
-   },[])
+   },[setDark])
 
 
   return (

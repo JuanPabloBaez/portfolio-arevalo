@@ -9,7 +9,7 @@ import HomeLogo from "../assets/logo-home-white.svg";
 
 
 function Home() {
-  const [dark, setDark] = useRecoilState(darkState);
+  const [, setDark] = useRecoilState(darkState);
   const homePics = useRecoilValue(imgState).filter((item)=>item.fields.categoria==="home")
 
 

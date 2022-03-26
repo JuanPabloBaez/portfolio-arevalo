@@ -3,7 +3,7 @@ import {useRecoilState} from 'recoil';
 import {darkState} from '../App.js';
 
 function Galeria() {
-  const [dark, setDark] = useRecoilState(darkState);
+  const [, setDark] = useRecoilState(darkState);
   
   useEffect( ()=>{
     async function setGaleria () {

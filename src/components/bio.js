@@ -7,7 +7,7 @@ import BioPic from '../assets/bioA.webp';
 
 
 function Bio() {
-  const [dark, setDark] = useRecoilState(darkState);
+  const [, setDark] = useRecoilState(darkState);
   const bioText = useRecoilValue(biografiaState);
   
 

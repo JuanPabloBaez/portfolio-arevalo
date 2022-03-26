@@ -10,7 +10,7 @@ import docePicB from "../assets/docenciaB.webp";
 
 
 function Docencia() {
-  const [dark, setDark] = useRecoilState(darkState);
+  const [, setDark] = useRecoilState(darkState);
   const docencia =useRecoilValue(docenciaState);
 
   

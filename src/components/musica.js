@@ -4,7 +4,7 @@ import {darkState} from '../App.js';
 
 
 function Musica() {
-  const [dark, setDark] = useRecoilState(darkState);
+  const [, setDark] = useRecoilState(darkState);
 
   useEffect( ()=>{
     async function setMusica () {

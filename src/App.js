@@ -36,11 +36,11 @@ export const docenciaState = atom({
 })
 
 function App() {
-const [images, setImages] = useRecoilState(imgState);
-const [conciertos, setConciertos] = useRecoilState(conciertoState);
-const [biografia, setBiografia] = useRecoilState(biografiaState);
-const [docencia, setDocencia] = useRecoilState(docenciaState);
-const [dark, setDark] = useRecoilState(darkState);
+const [, setImages] = useRecoilState(imgState);
+const [, setConciertos] = useRecoilState(conciertoState);
+const [, setBiografia] = useRecoilState(biografiaState);
+const [, setDocencia] = useRecoilState(docenciaState);
+const [dark] = useRecoilState(darkState);
 
 
 useEffect(()=>{

@@ -1,29 +1,32 @@
 
-.bio-body{
-    width: fit-content;
+.docencia-body {
+   
     max-width: 900px;
     margin: 0 auto;
     padding: 0 2%;
-    padding: 7vh 0;
+    padding-top: 7vh;
     
     h1{
         margin: 3% 2%;
     }
-
-    img{
-        max-width: 50vh;
+    .doce-photoA{
+        max-height: 60vh;
         object-fit: contain;
         padding-right: 1%;
         float: left;
         margin: 1%;
+        display: inline;
     }
     p{
         font-size: 1.15rem;
         margin: 1%;
         text-align: justify;
-        line-height: 1.5rem;
+        line-height: 1.5rem; 
     }
-   
+    .doce-photoB{
+        width: 100%;
+        padding: 0 8%;
+        margin: 4% auto;
         
-        
+    }
 }

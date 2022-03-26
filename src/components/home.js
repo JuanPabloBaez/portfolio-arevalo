@@ -5,6 +5,7 @@ import {useRecoilState, useRecoilValue} from 'recoil';
 import {darkState, imgState} from '../App.js'
 import 'swiper/css';
 import "swiper/css/effect-fade";
+import HomeLogo from "../assets/logo-home-white.svg";
 
 
 function Home() {
@@ -21,7 +22,7 @@ function Home() {
     <div className='home-body'>
       <header>
         <div className='home-first'>
-          <img className='home-logo' src='./logo-home-white.svg' alt="logo de Alejandro Arévalo"/>
+          <img className='home-logo' src={HomeLogo} alt="logo de Alejandro Arévalo"/>
         </div>
         <Swiper
         spaceBetween={20}

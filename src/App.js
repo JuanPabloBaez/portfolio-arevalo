@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import {client} from './client';
-import {atom,useRecoilState} from 'recoil';
+import {atom,useRecoilState, useRecoilValue} from 'recoil';
+
+
 import './styles/App.css';
 
 import Home from './components/home';
@@ -28,30 +30,41 @@ export const biografiaState = atom({
   key: "biografia",
   default: [],
 })
+export const docenciaState = atom({
+  key: "docencia",
+  default: [],
+})
 
 function App() {
 const [images, setImages] = useRecoilState(imgState);
 const [conciertos, setConciertos] = useRecoilState(conciertoState);
-const [biografia, setBiografia] = useState([]);
+const [biografia, setBiografia] = useRecoilState(biografiaState);
+const [docencia, setDocencia] = useRecoilState(docenciaState);
+const [dark, setDark] = useRecoilState(darkState);
 
 
 useEffect(()=>{
   async function getData () {
+    
     try{
       client.getEntries()
         .then((response)=> {
             const data = response.items;
-            setImages(data.filter(item=> item.sys.contentType.sys.id==="imagen")); 
-            const bio = data.filter(item=> item.sys.contentType.sys.id==="biografia")[0];
+            const img = data.filter(item=> item.sys.contentType.sys.id==="imagen");
+            setImages(img); 
+            
+
+            const bio = data.filter(item=> item.sys.contentType.sys.id==="biografia")[0].fields.textoBio;
             setBiografia(bio);
+
+            const docen = data.filter(item=> item.sys.contentType.sys.id==="docencia")[0].fields.textoDocencia;
+            setDocencia(docen);
+            
             const getConciertos= data.filter(item=> item.sys.contentType.sys.id==="concierto").sort(function(a,b){
               return new Date(b.fields.fecha) - new Date(a.fields.fecha);
             });
             setConciertos(getConciertos);
-
-
             
-            console.log(getConciertos)
         return
       })
     }catch(error){
@@ -62,21 +75,28 @@ useEffect(()=>{
   
 },[])
 
-console.log(conciertos)
+
+
 
   return (
     <div className="App">
-      <Router>
+      <Router >
         <Nav/>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/bio" element={<Bio bio={biografia}/>}/>            
+          <Route  path="/bio" element={<Bio />}/>            
           <Route path="/musica" element={<Musica />}/ >            
           <Route path="/docencia" element={<Docencia />}/>            
           <Route path="/conciertos" element={<Conciertos />}/>            
           <Route path="/galeria" element={<Galeria />}/>            
         </Routes>
       </Router>
+      <footer >
+        <p className={dark===true ? 'dark':null}>&copy; Alenjandro Arévalo {new Date().getFullYear()}</p>
+              
+        <p className={dark===true ? 'dark':null}>website:  <a href="http://jpbaez.com/" target="_blank" rel="noreferrer">Juan Pablo Baez</a></p>
+      </footer>
+
     </div>
   );
 }

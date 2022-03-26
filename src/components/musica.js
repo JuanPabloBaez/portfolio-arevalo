@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import {useRecoilState, useRecoilValue} from 'recoil';
+import {darkState} from '../App.js';
+
 
 function Musica() {
+  const [dark, setDark] = useRecoilState(darkState);
+
+  useEffect( ()=>{
+    async function setMusica () {
+      setDark(false);
+      return
+    }
+   setMusica()
+   },[])
+
   return (
-    <div>Musica</div>
+    <div className='musica-body'>Musica</div>
   )
 }
 

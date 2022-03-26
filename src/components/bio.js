@@ -1,30 +1,32 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState} from 'react';
 import {useRecoilState, useRecoilValue} from 'recoil';
-import {darkState, imgState} from '../App.js';
+import {darkState, biografiaState} from '../App.js';
 import RichText from '@madebyconnor/rich-text-to-jsx';
 import { BLOCKS } from '@contentful/rich-text-types';
+import BioPic from '../assets/bioA.webp';
 
 
-function Bio(bio) {
+function Bio() {
   const [dark, setDark] = useRecoilState(darkState);
-  const [bioPic, setBioPic] = useState(imgState);
-  const [bioText, setBioText] = useState("");
-  const getBioPic = useRecoilValue(imgState).filter((item)=>item.fields.categoria==="bio")[0];
+  const bioText = useRecoilValue(biografiaState);
+  
 
-  useEffect(async ()=>{
-    setDark(true);
-    setBioPic(getBioPic.fields.img.fields.file.url);
-    setBioText(bio.bio.fields.textoBio);
-    
-    
-    return
+
+
+  useEffect( ()=>{
+    async function setBio () {
+      setDark(true);
+      return
+    }
+   setBio()
    },[])
    
+   console.log(bioText)
+
   return (
     <div className='bio-body'>
       <h1>Biografia</h1>
-      <img className="bio-photo"  src={bioPic}  alt="Retrato de Alejandro Arévalo"/>
-      
+      <img className="bio-photo"  src={BioPic}  alt="Retrato de Alejandro Arévalo"/>
       <RichText 
         richText={bioText}
         overrides={{

@@ -3,6 +3,9 @@
 @import "./home";
 @import "./bio";
 @import "./conciertos";
+@import "./docencia";
+@import "./musica";
+@import "./galeria";
 
 
 
@@ -11,4 +14,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.App{
+    position: relative;
+    
+}
+footer{
+    color: white;
+    position:absolute;
+    width: 100%;
+    padding: 1% 3%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    .dark{
+        color: black
+    }
+    a{
+        text-decoration: none;
+        color: currentColor;
+    }
 }

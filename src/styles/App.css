@@ -52,6 +52,11 @@
   color: black;
 }
 
+.home-body {
+  min-height: 100vh;
+  background-color: black;
+}
+
 header {
   width: 100%;
   height: 80vh;
@@ -109,7 +114,7 @@ header {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 2%;
-  padding-top: 7vh;
+  padding: 7vh 0;
 }
 
 .bio-body h1 {
@@ -117,12 +122,12 @@ header {
 }
 
 .bio-body img {
-  max-height: 50vh;
+  max-width: 50vh;
   -o-object-fit: contain;
      object-fit: contain;
   padding-right: 1%;
   float: left;
-  margin: 2%;
+  margin: 1%;
 }
 
 .bio-body p {
@@ -169,10 +174,83 @@ header {
   margin-right: auto;
 }
 
+.docencia-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2%;
+  padding-top: 7vh;
+}
+
+.docencia-body h1 {
+  margin: 3% 2%;
+}
+
+.docencia-body .doce-photoA {
+  max-height: 60vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-right: 1%;
+  float: left;
+  margin: 1%;
+  display: inline;
+}
+
+.docencia-body p {
+  font-size: 1.15rem;
+  margin: 1%;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+.docencia-body .doce-photoB {
+  width: 100%;
+  padding: 0 8%;
+  margin: 4% auto;
+}
+
+.musica-body {
+  min-height: 100vh;
+  padding-top: 7vh;
+  background-color: black;
+}
+
+.galeria-body {
+  min-height: 100vh;
+  padding-top: 7vh;
+  background-color: black;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.App {
+  position: relative;
+}
+
+footer {
+  color: white;
+  position: absolute;
+  width: 100%;
+  padding: 1% 3%;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .dark {
+  color: black;
+}
+
+footer a {
+  text-decoration: none;
+  color: currentColor;
 }
 /*# sourceMappingURL=App.css.map */

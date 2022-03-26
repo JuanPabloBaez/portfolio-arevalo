@@ -15,7 +15,7 @@ function Nav() {
       <div className={darkMode===true? 'nav-links dark':'nav-links'}>
         <Link to="/bio">BIO</Link>
         <Link to="/musica">MUSICA</Link>
-        <Link to="/docencia">Docencia</Link>
+        <Link to="/docencia">DOCENCIA</Link>
         <Link to="/conciertos">CONCIERTOS</Link>
         <Link to="/galeria">GALERIA</Link>
       </div>

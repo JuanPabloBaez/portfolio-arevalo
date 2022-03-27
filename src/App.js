@@ -76,7 +76,7 @@ useEffect(()=>{
   };
   getData();
   
-},[setBiografia,setConciertos,setDocencia, setImages])
+},[setBiografia,setConciertos,setDocencia, setImages, setPrensa])
 
 
  

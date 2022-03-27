@@ -16,7 +16,7 @@ import YoutubeLogo from "../assets/icons/youtube.svg";
 function Home() {
   const [, setDark] = useRecoilState(darkState);
   const homePics = useRecoilValue(imgState).filter((item)=>item.fields.categoria==="home");
-  const conciertoLista = useRecoilValue(conciertoState).filter(item=> new Date(item.fields.fecha)  >= new Date);
+  const conciertoLista = useRecoilValue(conciertoState).filter(item=> new Date(item.fields.fecha)  >= new Date());
   const prensaLista = useRecoilValue(prensaState)
 
  useEffect(()=>{
@@ -56,7 +56,7 @@ function Home() {
             <a href="https://open.spotify.com/artist/3LJFVzMZewx7BoG5Cuh4N5?si=i3W01HiIToepWX5Mnl4-4Q" target="_blank"  rel="noreferrer" ><img src={SpotifyLogo} alt="Spotify de Alejandro Arévalo"/></a>
             <a href="https://www.instagram.com/alejandro_arevalo_pianista/" target="_blank"  rel="noreferrer"><img src={InstaLogo} alt="Instagram de Alejandro Arévalo"/></a>
             <a href="https://www.facebook.com/AlejandroArevaloMusico" target="_blank"  rel="noreferrer"><img src={FacebookLogo} alt="Facebook de Alejandro Arévalo"/></a>
-            <a href="" target="_blank"  rel="noreferrer"><img src={YoutubeLogo} alt="Youtube de Alejandro Arévalo"/></a>
+            <a href="https://www.youtube.com/user/AlejandroArevalob" target="_blank"  rel="noreferrer"><img src={YoutubeLogo} alt="Youtube de Alejandro Arévalo"/></a>
         </div>
         <div className='prox-conciertos'>
           <h2>Próximos Conciertos</h2>

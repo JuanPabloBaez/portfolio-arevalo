@@ -34,10 +34,15 @@ export const docenciaState = atom({
   key: "docencia",
   default: [],
 })
+export const prensaState = atom({
+  key: "prensa",
+  default: [],
+})
 
 function App() {
 const [, setImages] = useRecoilState(imgState);
 const [, setConciertos] = useRecoilState(conciertoState);
+const [, setPrensa] = useRecoilState(prensaState);
 const [, setBiografia] = useRecoilState(biografiaState);
 const [, setDocencia] = useRecoilState(docenciaState);
 const [dark] = useRecoilState(darkState);
@@ -52,19 +57,17 @@ useEffect(()=>{
             const data = response.items;
             const img = data.filter(item=> item.sys.contentType.sys.id==="imagen");
             setImages(img); 
-            
-
             const bio = data.filter(item=> item.sys.contentType.sys.id==="biografia")[0].fields.textoBio;
             setBiografia(bio);
-
             const docen = data.filter(item=> item.sys.contentType.sys.id==="docencia")[0].fields.textoDocencia;
             setDocencia(docen);
-            
             const getConciertos= data.filter(item=> item.sys.contentType.sys.id==="concierto").sort(function(a,b){
               return new Date(b.fields.fecha) - new Date(a.fields.fecha);
             });
             setConciertos(getConciertos);
-            
+            const getPrensa = data.filter(item=> item.sys.contentType.sys.id==="prensa");
+            setPrensa(getPrensa)
+
         return
       })
     }catch(error){
@@ -76,7 +79,7 @@ useEffect(()=>{
 },[setBiografia,setConciertos,setDocencia, setImages])
 
 
-
+ 
 
   return (
     <div className="App">
@@ -92,8 +95,7 @@ useEffect(()=>{
         </Routes>
       </Router>
       <footer >
-        <p className={dark===true ? 'dark':null}>&copy; Alenjandro Arévalo {new Date().getFullYear()}</p>
-              
+        <p className={dark===true ? 'dark':null}>&copy; Alejandro Arévalo {new Date().getFullYear()}</p>
         <p className={dark===true ? 'dark':null}>website:  <a href="http://jpbaez.com/" target="_blank" rel="noreferrer">Juan Pablo Baez</a></p>
       </footer>
 

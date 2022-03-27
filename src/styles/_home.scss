@@ -1,7 +1,9 @@
 
 .home-body{
     min-height: 100vh;
+    height: fit-content;
     background-color: black;
+    
 }
 header{
    width: 100%;
@@ -31,9 +33,75 @@ header{
     z-index: 5;
 }
 .home-logo{
-    
     width: 90%;
     max-width: 600px;
-    
-    
+}
+.home-info{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 4vh;
+   
+}
+.social{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    gap: 3%;
+    padding: 4%;
+    a{
+        height: inherit;
+        display: flex;
+        align-items: center;
+        img{
+            height: 80%;
+            width: auto;
+        }
+    }
+}
+
+
+.prox-conciertos{
+    background-color: white;
+    padding: 1%;
+    width: 50%;
+    border: 1px solid red;
+    h2{
+        margin: 3%;
+    }
+    .concierto{
+        display: flex;
+        justify-content: space-around;
+        max-width: 600px;
+        margin: 0 auto;
+        gap: 1%;
+        margin-bottom: 1%;
+        .fecha{
+            width: 20%;
+            font-weight: 100;
+        }
+        .recinto{
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+}
+
+
+.prensa{
+    background-color: white;
+    width: 50%;
+    padding: 1%;
+    border: 1px solid red;
+    h2{
+        margin: 3%;
+    }
+    a{
+        margin: 3% 0;
+        display: block;
+    }
 }

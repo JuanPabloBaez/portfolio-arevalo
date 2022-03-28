@@ -76,8 +76,8 @@ function Home() {
           <h2>Prensa</h2>
           {
             prensaLista.map((item, index)=>{
-              console.log(item)
-              return( <a href={item.fields.link} target="_blank"  rel="noreferrer" > {item.fields.titulo} </a>)
+              
+              return( <a href={item.fields.link} target="_blank"  rel="noreferrer" key={index} > {item.fields.titulo} </a>)
              
             })
           }

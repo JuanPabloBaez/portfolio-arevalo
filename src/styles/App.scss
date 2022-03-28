@@ -1,4 +1,4 @@
-
+@import "./fonts";
 @import "./nav";
 @import "./home";
 @import "./bio";
@@ -16,6 +16,7 @@
     box-sizing: border-box;
 }
 .App{
+    font-family: 'Epilogue', Helvetica, sans-serif;
     position: relative;
     a{
         text-decoration: none;

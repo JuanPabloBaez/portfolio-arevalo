@@ -22,6 +22,10 @@ export const imgState = atom({
   key: "images",
   default: [],
 })
+export const audioState = atom({
+  key: "audios",
+  default: [],
+})
 export const conciertoState = atom({
   key: "conciertos",
   default: [],
@@ -38,13 +42,20 @@ export const prensaState = atom({
   key: "prensa",
   default: [],
 })
+export const proyectoState = atom({
+  key: "proyectos",
+  default: [],
+})
+
 
 function App() {
 const [, setImages] = useRecoilState(imgState);
+const [, setAudios] = useRecoilState(audioState);
 const [, setConciertos] = useRecoilState(conciertoState);
 const [, setPrensa] = useRecoilState(prensaState);
 const [, setBiografia] = useRecoilState(biografiaState);
 const [, setDocencia] = useRecoilState(docenciaState);
+const [, setProyectos] = useRecoilState(proyectoState);
 const [dark] = useRecoilState(darkState);
 
 
@@ -53,10 +64,14 @@ useEffect(()=>{
     
     try{
       client.getEntries()
-        .then((response)=> {
+        .then(async (response)=> {
             const data = response.items;
             const img = data.filter(item=> item.sys.contentType.sys.id==="imagen");
             setImages(img); 
+            const audio = data.filter(item=> item.sys.contentType.sys.id==="audio").map((item)=>{
+              return {src:item.fields.audio.fields.file.url, title:item.fields.titulo ,artist:item.fields.proyecto}
+            });            
+            setAudios(audio); 
             const bio = data.filter(item=> item.sys.contentType.sys.id==="biografia")[0].fields.textoBio;
             setBiografia(bio);
             const docen = data.filter(item=> item.sys.contentType.sys.id==="docencia")[0].fields.textoDocencia;
@@ -66,7 +81,11 @@ useEffect(()=>{
             });
             setConciertos(getConciertos);
             const getPrensa = data.filter(item=> item.sys.contentType.sys.id==="prensa");
-            setPrensa(getPrensa)
+            setPrensa(getPrensa);
+            const getProyectos = data.filter(item=> item.sys.contentType.sys.id==="proyecto");
+            setProyectos(getProyectos.reverse())
+           
+
 
         return
       })
@@ -76,7 +95,7 @@ useEffect(()=>{
   };
   getData();
   
-},[setBiografia,setConciertos,setDocencia, setImages, setPrensa])
+},[setBiografia,setConciertos,setDocencia, setImages, setPrensa, setProyectos])
 
 
  

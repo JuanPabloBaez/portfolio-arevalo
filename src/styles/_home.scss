@@ -27,16 +27,26 @@ header{
     width: 90%;
     max-width: 800px;
 }
-.react-player {
-    width: 40%;
-    height: 10vh;
-    background: none;
-    color: #ff0000;
+.audio-player {
+    
+    padding: .2rem;
+    gap: 5px;
+    filter: invert(100%);
+    width: auto !important;
+    font-size: 1.2rem !important;
+    font-weight: 800;
+    border: 1px solid;
+    
+    
+    
+    
+    img{
+        height: 2rem !important;
+    }
+    
 
 }
-.visualAudible__artworkOverlay div{
-    display: none!important;
-}
+
 .swiper {
     height: inherit;
     z-index: 0;

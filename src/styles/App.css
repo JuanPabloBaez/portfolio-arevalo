@@ -244,15 +244,19 @@ header {
   max-width: 800px;
 }
 
-.react-player {
-  width: 40%;
-  height: 10vh;
-  background: none;
-  color: #ff0000;
+.audio-player {
+  padding: .2rem;
+  gap: 5px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: auto !important;
+  font-size: 1.2rem !important;
+  font-weight: 800;
+  border: 1px solid;
 }
 
-.visualAudible__artworkOverlay div {
-  display: none !important;
+.audio-player img {
+  height: 2rem !important;
 }
 
 .swiper {
@@ -466,8 +470,94 @@ header {
 
 .musica-body {
   min-height: 100vh;
-  padding-top: 7vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 7vh 3%;
   background-color: black;
+  color: white;
+}
+
+.button-panel {
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.button-panel button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: none;
+  color: currentColor;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.button-panel button.button-active {
+  font-weight: 900;
+}
+
+.proyecto-header {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.proyecto-header h1 {
+  margin: 2% 0;
+}
+
+.proyecto-header img {
+  max-width: 40%;
+  float: left;
+}
+
+.links-proyecto {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1% 0;
+  gap: 2%;
+}
+
+.links-proyecto img {
+  -webkit-filter: invert(100%) sepia(99%) saturate(18%) hue-rotate(240deg) brightness(103%) contrast(100%);
+          filter: invert(100%) sepia(99%) saturate(18%) hue-rotate(240deg) brightness(103%) contrast(100%);
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 80%;
+}
+
+.slider-proyecto {
+  max-height: 50vh;
+  max-width: 800px;
+  margin: 3% 0;
+}
+
+.slider-proyecto .slide-photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.disco-proyecto {
+  margin: 4% auto;
 }
 
 .galeria-body {

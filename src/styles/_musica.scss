@@ -1,5 +1,67 @@
 .musica-body{
     min-height: 100vh;
-    padding-top: 7vh;
+    height: fit-content;
+    padding: 7vh 3%;
     background-color: black;
+    color: white;
+}
+
+.button-panel{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    button{
+        height: fit-content;
+        background: none;
+        color: currentColor;
+        border:none;
+        font-size: 1.2rem;
+        font-weight: 300;
+        &.button-active{
+            font-weight: 900;
+            
+        }
+    }
+}
+.proyecto-header{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+    h1{
+        margin: 2% 0;
+    }
+    img{
+        max-width: 40%;
+        float: left;
+    }
+}
+
+.links-proyecto{
+   
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0;
+    gap: 2%;
+    img{
+        filter: invert(100%) sepia(99%) saturate(18%) hue-rotate(240deg) brightness(103%) contrast(100%);
+        object-fit: contain;
+        height: 80%;
+    }
+}
+.slider-proyecto{
+    max-height: 50vh;
+    max-width: 800px;
+    margin: 3% 0;
+
+    .slide-photo{
+        object-fit: cover;
+    }
+}
+.disco-proyecto{
+    
+    margin: 4% auto;
 }

@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Navigation} from "swiper";
-import {useRecoilState, useRecoilValue} from 'recoil';
-import {darkState, imgState, conciertoState, prensaState} from '../App.js';
-import ReactPlayer from 'react-player/lazy';
+import {useRecoilState, useRecoilValue, useRecoilValueLoadable} from 'recoil';
+import {darkState, imgState, audioState, conciertoState, prensaState} from '../App.js';
+import ReactPlayer from 'react-player';
+import AudioPlayer from "react-modular-audio-player";
+import AudioPlayer2 from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+
 import 'swiper/css';
 import "swiper/css/effect-fade";
 import HomeLogo from "../assets/logo-home-white.svg";
@@ -17,39 +21,30 @@ import SpotifyLogo from "../assets/icons/spotify.svg";
 function Home() {
   const [, setDark] = useRecoilState(darkState);
   const homePics = useRecoilValue(imgState).filter((item)=>item.fields.categoria==="home");
+  const {state,contents} = useRecoilValueLoadable(audioState);  
   const conciertoLista = useRecoilValue(conciertoState).filter(item=> new Date(item.fields.fecha)  >= new Date());
-  const prensaLista = useRecoilValue(prensaState)
+  const prensaLista = useRecoilValue(prensaState);
+
+  const [audioLinks, setAudioLinks] = useState(contents)
 
  useEffect(()=>{
   setDark(false);
- },[setDark])
-
+  
+ },[setDark]);
  
+ 
+ console.log(state, contents)
+ console.log(audioState)
   return (
     <div className='home-body'>
       <header>
         <div className='home-first'>
           <img className='home-logo' src={HomeLogo} alt="logo de Alejandro Arévalo"/>
-          <ReactPlayer 
-            url='https://soundcloud.com/alejandro-javier-ar-valo-berrios/sets/el-sueno-y-las-ruinas?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'
-            className='react-player'
-            light= 'true'
-            width={"40%"}
-            height={"20vh"}
-            background-image={"none"}
-            
-            config={{
-              soundcloud:{
-                options:{
-                  show_artwork: false,
-                  show_user: false,
-                  color: "#038cfc",
-                }
-              } 
-            }}
-           />
 
+             { contents.length  &&  <AudioPlayer audioFiles={contents}/> }
+              
         </div>
+
         <Swiper
         spaceBetween={20}
         slidesPerView={1}

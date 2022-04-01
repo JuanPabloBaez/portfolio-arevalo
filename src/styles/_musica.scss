@@ -1,17 +1,22 @@
 .musica-body{
     min-height: 100vh;
     height: fit-content;
-    padding: 7vh 3%;
+    width: 100%;
+    padding: 8vh 3%;
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .button-panel{
-    height: 8vh;
+    height: 6vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    max-width: 1000px;
     button{
         height: fit-content;
         background: none;
@@ -25,43 +30,78 @@
         }
     }
 }
-.proyecto-header{
+.proyecto-body{
+    width: 100%;
     max-width: 1000px;
+}
+.proyecto-header{
     margin: 0 auto;
-    text-align: justify;
+    max-width: 1000px;
     h1{
         margin: 2% 0;
     }
     img{
-        max-width: 40%;
+        max-width: 60%;
         float: left;
+        padding: 1%;
+    }
+    p {
+        text-align: justify;
+        margin: 1.5% 0;
+        line-height: 1.2rem;
     }
 }
 
 .links-proyecto{
-   
-    height: 60px;
+    height: 45px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 1% 0;
     gap: 2%;
-    img{
-        filter: invert(100%) sepia(99%) saturate(18%) hue-rotate(240deg) brightness(103%) contrast(100%);
-        object-fit: contain;
-        height: 80%;
+    a {
+        height: inherit;
+        img{
+            filter: invert(100%) sepia(99%) saturate(18%) hue-rotate(240deg) brightness(103%) contrast(100%);
+            object-fit: contain;
+            height: 80%;
+        }
     }
 }
-.slider-proyecto{
-    max-height: 50vh;
-    max-width: 800px;
-    margin: 3% 0;
 
-    .slide-photo{
-        object-fit: cover;
+.slider-proyecto{
+    width: 90%;
+    max-width: 1000px;
+    height: 55vh;
+    margin: 3% 0;
+    .swiper-slide{
+        height: 100%;
+        width: 100%;
+        img{
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+        }
     }
 }
 .disco-proyecto{
-    
+    width: 80% !important;
+    max-width: 600px;
     margin: 4% auto;
+    iframe{
+       object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 600px) { 
+
+    .proyecto-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            float: none;
+        }
+    }
+
 }

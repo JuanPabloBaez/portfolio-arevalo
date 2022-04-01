@@ -44,3 +44,9 @@ footer{
         color: currentColor;
     }
 }
+
+@media screen and (max-width: 600px) {
+    footer{
+        font-size: .8rem;
+    }
+}

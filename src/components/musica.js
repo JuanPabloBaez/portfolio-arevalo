@@ -19,7 +19,7 @@ SwiperCore.use([Navigation]);
 
 function Musica() {
   const [, setDark] = useRecoilState(darkState);
-  const {state, contents} = useRecoilValueLoadable(proyectoState);
+  const { contents} = useRecoilValueLoadable(proyectoState);
   const [proyectoIndex, setProyectoIndex] = useState(0);
 
   useEffect( ()=>{
@@ -60,12 +60,16 @@ function Musica() {
                 linkSpotify,
                 linkDiscos
               } = item.fields;
-            if (proyectoIndex===index)
+
+
+             
+            if (proyectoIndex===index){
+            console.log(nombre, linkWeb)
             return(
-              <>
+            <>
               <div className='proyecto-header' >
                 <h1>{nombre}</h1>
-                {logo&& <img src={logo.fields.file.url} alt="proyecto logo" />}
+                {logo && <img src={logo.fields.file.url} alt="proyecto logo" />}
                 <RichText 
                   richText={descripcion}
                   overrides={{
@@ -78,16 +82,16 @@ function Musica() {
                     }}/>
               </div>
               { (linkWeb||linkFacebook||linkInstagram||linkYoutube||linkSpotify)&& <div className='links-proyecto'>
-                    {linkWeb&&<img src={WebLogo} alt=''/>}
-                    {linkSpotify&&<img src={SpotifyLogo} alt=''/>}
-                    {linkYoutube&&<img src={YoutubeLogo} alt=''/>}
-                    {linkFacebook&&<img src={FacebookLogo} alt=''/>}
-                    {linkInstagram&&<img src={InstaLogo} alt=''/>}
+                    {linkWeb &&  <a href={linkWeb} target="_blank"  rel="noreferrer"> <img src={WebLogo} alt='website'/> </a>}
+                    {linkSpotify&& <a href={linkSpotify}target="_blank"  rel="noreferrer"><img src={SpotifyLogo} alt='Spotify account'/></a>}
+                    {linkYoutube&& <a href={linkYoutube}target="_blank"  rel="noreferrer"><img src={YoutubeLogo} alt='Youtube channel'/></a>}
+                    {linkFacebook&& <a href={linkFacebook}target="_blank"  rel="noreferrer"><img src={FacebookLogo} alt='Facebook page'/></a>}
+                    {linkInstagram&& <a href={linkInstagram}target="_blank"  rel="noreferrer"><img src={InstaLogo} alt='Instagram account'/></a>}
                     
               </div>}
               {fotos&& <Swiper
-                spaceBetween={50}
-                centeredSlides={true}
+                className="slider-proyecto" 
+                
                 slidesPerView={1}
                 loop={true}
                 effect="fade"
@@ -97,7 +101,7 @@ function Musica() {
                 }}
                 navigation={true}
                 modules={[Autoplay, Navigation, EffectFade]}
-                className="slider-proyecto" 
+                
                 >
                 {fotos.map((item, index)=>{
                   return <SwiperSlide key={index}>
@@ -122,10 +126,8 @@ function Musica() {
                 }}
               />)
               }) }
-              </>
-              
-
-            )
+             </>  
+            )}
           })
         }
       </div>

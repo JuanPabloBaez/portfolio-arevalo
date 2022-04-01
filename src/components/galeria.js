@@ -18,9 +18,6 @@ function Galeria() {
     }
    setGaleria()
    },[setDark])
-   
-
-   console.log(videosGaleria)
 
   return (
     <div className='galeria-body'>
@@ -43,12 +40,15 @@ function Galeria() {
       {videosGaleria.map((item,index)=>{
         
         return ( 
+          <div className='video-container' key={index}>
           <ReactPlayer
-          className='react-player'
+          className='video-player'
           url={item.link}
           width='100%'
           height='100%'
         />
+        <p>{item.titulo}</p>
+        </div>
          )
       })}
    

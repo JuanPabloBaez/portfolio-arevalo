@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Navigation} from "swiper";
 import {useRecoilState, useRecoilValue, useRecoilValueLoadable} from 'recoil';
@@ -28,8 +29,6 @@ function Home() {
  },[setDark]);
  
  
- console.log(state, contents)
- console.log(audioState)
   return (
     <div className='home-body'>
       <header>
@@ -68,8 +67,12 @@ function Home() {
             <a href="https://www.facebook.com/AlejandroArevaloMusico" target="_blank"  rel="noreferrer"><img src={FacebookLogo} alt="Facebook de Alejandro Arévalo"/></a>
         </div>
         <div className='prox-conciertos'>
-          <h2>Próximos Conciertos</h2>
-        { conciertoLista.map((item, index)=>{
+          <div className='concierto-header'>
+            <h2>Próximos Conciertos</h2>
+            <Link to="/conciertos">ver todos &gt; </Link>
+          </div>
+          
+        { conciertoLista.length ? conciertoLista.map((item, index)=>{
             let newDate = new Date(item.fields.fecha).toLocaleString( "es-ES" , { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
             return(
             <div className='concierto' key={index}>
@@ -78,7 +81,7 @@ function Home() {
               <p className='ciudad'>{item.fields.ciudad}</p>
             </div>
             )
-          })
+          }) : <p>Proximamente nuevas fechas</p>
         }
         </div>
         <div className='prensa'>
@@ -86,7 +89,7 @@ function Home() {
           {
             prensaLista.map((item, index)=>{
               
-              return( <a href={item.fields.link} target="_blank"  rel="noreferrer" key={index} > {item.fields.titulo} </a>)
+              return( <a href={item.fields.link} target="_blank"  rel="noreferrer" key={index} > 	&bull;   {item.fields.titulo} </a>)
              
             })
           }

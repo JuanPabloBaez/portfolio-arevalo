@@ -562,6 +562,9 @@ header {
 
 .galeria-body {
   min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding-top: 7vh;
   background-color: black;
 }

@@ -46,6 +46,10 @@ export const proyectoState = atom({
   key: "proyectos",
   default: [],
 })
+export const videoState = atom({
+  key: "videos",
+  default: [],
+})
 
 
 function App() {
@@ -56,6 +60,7 @@ const [, setPrensa] = useRecoilState(prensaState);
 const [, setBiografia] = useRecoilState(biografiaState);
 const [, setDocencia] = useRecoilState(docenciaState);
 const [, setProyectos] = useRecoilState(proyectoState);
+const [, setVideos] = useRecoilState(videoState);
 const [dark] = useRecoilState(darkState);
 
 
@@ -66,24 +71,36 @@ useEffect(()=>{
       client.getEntries()
         .then(async (response)=> {
             const data = response.items;
-            const img = data.filter(item=> item.sys.contentType.sys.id==="imagen");
+            
+            const img = data.filter(item=> item.sys.contentType.sys.id==="imagen").reverse();
             setImages(img); 
+            
             const audio = data.filter(item=> item.sys.contentType.sys.id==="audio").map((item)=>{
               return {src:item.fields.audio.fields.file.url, title:item.fields.titulo ,artist:item.fields.proyecto}
             });            
-            setAudios(audio); 
-            const bio = data.filter(item=> item.sys.contentType.sys.id==="biografia")[0].fields.textoBio;
-            setBiografia(bio);
-            const docen = data.filter(item=> item.sys.contentType.sys.id==="docencia")[0].fields.textoDocencia;
-            setDocencia(docen);
+            setAudios(audio);
+            
+            const getPrensa = data.filter(item=> item.sys.contentType.sys.id==="prensa");
+            setPrensa(getPrensa);
+            
             const getConciertos= data.filter(item=> item.sys.contentType.sys.id==="concierto").sort(function(a,b){
               return new Date(b.fields.fecha) - new Date(a.fields.fecha);
             });
             setConciertos(getConciertos);
-            const getPrensa = data.filter(item=> item.sys.contentType.sys.id==="prensa");
-            setPrensa(getPrensa);
+             
+            const bio = data.filter(item=> item.sys.contentType.sys.id==="biografia")[0].fields.textoBio;
+            setBiografia(bio);
+
             const getProyectos = data.filter(item=> item.sys.contentType.sys.id==="proyecto");
-            setProyectos(getProyectos.reverse())
+            setProyectos(getProyectos.reverse());
+
+            const docen = data.filter(item=> item.sys.contentType.sys.id==="docencia")[0].fields.textoDocencia;
+            setDocencia(docen);
+            
+            const getVideos = data.filter(item=> item.sys.contentType.sys.id==="video").map((item)=>{
+                return {link:item.fields.link, titulo:item.fields.titulo}
+            });
+            setVideos(getVideos)
            
 
 

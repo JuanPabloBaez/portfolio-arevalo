@@ -3,10 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Navigation} from "swiper";
 import {useRecoilState, useRecoilValue, useRecoilValueLoadable} from 'recoil';
 import {darkState, imgState, audioState, conciertoState, prensaState} from '../App.js';
-import ReactPlayer from 'react-player';
+
 import AudioPlayer from "react-modular-audio-player";
-import AudioPlayer2 from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
 
 import 'swiper/css';
 import "swiper/css/effect-fade";
@@ -25,11 +23,8 @@ function Home() {
   const conciertoLista = useRecoilValue(conciertoState).filter(item=> new Date(item.fields.fecha)  >= new Date());
   const prensaLista = useRecoilValue(prensaState);
 
-  const [audioLinks, setAudioLinks] = useState(contents)
-
  useEffect(()=>{
   setDark(false);
-  
  },[setDark]);
  
  

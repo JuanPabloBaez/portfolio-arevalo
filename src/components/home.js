@@ -20,7 +20,7 @@ import SpotifyLogo from "../assets/icons/spotify.svg";
 function Home() {
   const [, setDark] = useRecoilState(darkState);
   const homePics = useRecoilValue(imgState).filter((item)=>item.fields.categoria==="home");
-  const {state,contents} = useRecoilValueLoadable(audioState);  
+  const {contents} = useRecoilValueLoadable(audioState);  
   const conciertoLista = useRecoilValue(conciertoState).filter(item=> new Date(item.fields.fecha)  >= new Date());
   const prensaLista = useRecoilValue(prensaState);
 

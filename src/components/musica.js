@@ -60,9 +60,6 @@ function Musica() {
                 linkSpotify,
                 linkDiscos
               } = item.fields;
-
-
-             
             if (proyectoIndex===index){
             console.log(nombre, linkWeb)
             return(
@@ -127,7 +124,7 @@ function Musica() {
               />)
               }) }
              </>  
-            )}
+            )} else return null
           })
         }
       </div>

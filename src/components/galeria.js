@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {useRecoilState, useRecoilValue, useRecoilValueLoadable} from 'recoil';
+import {useRecoilState, useRecoilValue} from 'recoil';
 import {darkState, imgState, videoState} from '../App.js';
 import ReactPlayer from 'react-player';
 import { Swiper, SwiperSlide } from 'swiper/react';

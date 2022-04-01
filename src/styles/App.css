@@ -192,6 +192,12 @@
   text-shadow: none;
 }
 
+@media screen and (max-width: 600px) {
+  .nav-links a {
+    font-size: 1rem !important;
+  }
+}
+
 .home-body {
   min-height: 100vh;
   height: -webkit-fit-content;
@@ -253,7 +259,7 @@ header {
   font-size: 1.2rem !important;
   border: 2px solid;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .audio-player img {
@@ -262,7 +268,7 @@ header {
 
 .audio-player .audio-player-track-name {
   border-radius: 5px;
-  background-color: rgba(69, 69, 69, 0.6);
+  background-color: rgba(198, 198, 198, 0.5);
   padding: 5px;
 }
 

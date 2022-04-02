@@ -91,8 +91,10 @@ useEffect(()=>{
             const bio = data.filter(item=> item.sys.contentType.sys.id==="biografia")[0].fields.textoBio;
             setBiografia(bio);
 
-            const getProyectos = data.filter(item=> item.sys.contentType.sys.id==="proyecto");
-            setProyectos(getProyectos.reverse());
+            const getProyectos = data.filter(item=> item.sys.contentType.sys.id==="proyecto").sort(function(a,b){return a.fields.index - b.fields.index;});
+            setProyectos(getProyectos);
+
+            console.log(getProyectos)
 
             const docen = data.filter(item=> item.sys.contentType.sys.id==="docencia")[0].fields.textoDocencia;
             setDocencia(docen);

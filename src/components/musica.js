@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {useRecoilState, useRecoilValueLoadable} from 'recoil';
 import {darkState, proyectoState} from '../App.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore,{ EffectFade, Autoplay, Navigation} from "swiper";
+import SwiperCore,{  Navigation} from "swiper";
+
 import RichText from '@madebyconnor/rich-text-to-jsx';
 import { BLOCKS } from '@contentful/rich-text-types';
 import ReactPlayer from 'react-player/lazy';
@@ -16,6 +17,7 @@ import YoutubeLogo from "../assets/icons/youtube.svg";
 import WebLogo from "../assets/icons/web.svg";
 
 SwiperCore.use([Navigation]);
+
 
 function Musica() {
   const [, setDark] = useRecoilState(darkState);
@@ -61,7 +63,6 @@ function Musica() {
                 linkDiscos
               } = item.fields;
             if (proyectoIndex===index){
-            console.log(nombre, linkWeb)
             return(
             <>
               <div className='proyecto-header' >
@@ -88,17 +89,10 @@ function Musica() {
               </div>}
               {fotos&& <Swiper
                 className="slider-proyecto" 
-                
+                spaceBetween={50}
                 slidesPerView={1}
-                loop={true}
-                effect="fade"
-                autoplay={{
-                  delay: 4000,
-                  
-                }}
                 navigation={true}
-                modules={[Autoplay, Navigation, EffectFade]}
-                
+                loop
                 >
                 {fotos.map((item, index)=>{
                   return <SwiperSlide key={index}>
@@ -124,7 +118,8 @@ function Musica() {
               />)
               }) }
              </>  
-            )} else return null
+            )} else return null;
+          
           })
         }
       </div>

@@ -10,7 +10,8 @@ import "swiper/css/navigation";
 function Galeria() {
   const [, setDark] = useRecoilState(darkState);
   const imagesGaleria = useRecoilValue(imgState).filter((item)=>item.fields.categoria==="galeria");
-  const videosGaleria = useRecoilValue(videoState)
+  const videosGaleria = useRecoilValue(videoState);
+
   useEffect( ()=>{
     async function setGaleria () {
       setDark(false);
@@ -46,6 +47,11 @@ function Galeria() {
           url={item.link}
           width='100%'
           height='100%'
+          config={{
+            youtube: {
+              playerVars: { showinfo: 1  }
+            },
+          }}
         />
         <p>{item.titulo}</p>
         </div>

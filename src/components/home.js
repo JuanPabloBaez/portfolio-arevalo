@@ -93,7 +93,7 @@ function Home() {
               </div>
             </div>
             )
-          }) : <p>Proximamente nuevas fechas</p>
+          }) : <p>Próximamente nuevas fechas</p>
         }
         </div>
         <ul className='prensa'>

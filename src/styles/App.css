@@ -265,6 +265,13 @@ header {
   margin-bottom: 8px;
 }
 
+.prox-conciertos p {
+  margin: 1% auto;
+  width: 90%;
+  max-width: 450px;
+  font-style: italic;
+}
+
 .prox-conciertos .concierto {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -653,9 +660,6 @@ header {
 .disco-proyecto {
   width: 80% !important;
   max-width: 600px;
-  height: -webkit-fit-content !important;
-  height: -moz-fit-content !important;
-  height: fit-content !important;
   margin: 4% auto;
 }
 
@@ -677,6 +681,9 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .proyecto-header img {
     float: none;
@@ -715,8 +722,10 @@ header {
 .video-container {
   width: 90%;
   max-width: 700px;
-  height: 35vh;
-  margin: 0 auto 3% auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto 8vh auto;
 }
 
 .video-container p {

@@ -102,8 +102,13 @@ header{
         h2{
             margin-bottom: 8px;
         }
-        
     }
+    p{
+        margin: 1% auto;
+        width: 90%;
+        max-width: 450px;
+        font-style: italic;
+        }
     .concierto{
         display: flex;
         width: 90%;

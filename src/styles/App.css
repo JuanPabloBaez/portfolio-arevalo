@@ -1,144 +1,64 @@
 @font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Epilogue-ExtraBoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-BoldItalic.woff2") format("woff2"), url("../fonts/Epilogue-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Epilogue-ExtraLightItalic.woff") format("woff");
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-ExtraBold.woff2") format("woff2"), url("../fonts/Epilogue-ExtraBold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-BlackItalic.woff2") format("woff2"), url("../fonts/Epilogue-BlackItalic.woff") format("woff");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-Bold.woff2") format("woff2"), url("../fonts/Epilogue-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-Black.woff2") format("woff2"), url("../fonts/Epilogue-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-ExtraLight.woff2") format("woff2"), url("../fonts/Epilogue-ExtraLight.woff") format("woff");
+  font-family: 'Manrope';
+  src: url("../fonts/Manrope-ExtraLight.woff2") format("woff2"), url("../fonts/Manrope-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-Medium.woff2") format("woff2"), url("../fonts/Epilogue-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-Italic.woff2") format("woff2"), url("../fonts/Epilogue-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-Regular.woff2") format("woff2"), url("../fonts/Epilogue-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-Light.woff2") format("woff2"), url("../fonts/Epilogue-Light.woff") format("woff");
+  font-family: 'Manrope';
+  src: url("../fonts/Manrope-Light.woff2") format("woff2"), url("../fonts/Manrope-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-SemiBold.woff2") format("woff2"), url("../fonts/Epilogue-SemiBold.woff") format("woff");
+  font-family: 'Manrope';
+  src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url("../fonts/Manrope-ExtraLight.woff2") format("woff2"), url("../fonts/Manrope-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-Thin.woff2") format("woff2"), url("../fonts/Epilogue-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-ThinItalic.woff2") format("woff2"), url("../fonts/Epilogue-ThinItalic.woff") format("woff");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-MediumItalic.woff2") format("woff2"), url("../fonts/Epilogue-MediumItalic.woff") format("woff");
+  font-family: 'Manrope';
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Epilogue-SemiBoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Epilogue';
-  src: url("../fonts/Epilogue-LightItalic.woff2") format("woff2"), url("../fonts/Epilogue-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
+  font-family: 'Manrope';
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -165,15 +85,13 @@
   -o-object-fit: contain;
      object-fit: contain;
   height: 4vh;
-  -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
 }
 
 .nav-bar .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 16px;
   margin: 0 1%;
 }
 
@@ -181,15 +99,13 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   color: currentColor;
 }
 
 .nav-bar .dark a {
   color: black;
-  text-shadow: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -208,7 +124,7 @@
 
 header {
   width: 100%;
-  height: 80vh;
+  height: calc(100vh - 120px);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,6 +140,8 @@ header {
 .home-first {
   width: 100%;
   height: 100%;
+  padding: 7vh 0;
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,23 +161,22 @@ header {
 
 .home-logo {
   width: 90%;
+  max-height: 80%;
   max-width: 800px;
-  -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .audio-player {
   width: 800px !important;
-  max-width: 90%;
+  max-width: 95%;
   margin-top: 2%;
-  padding: .3rem;
+  padding: 1% 2%;
   gap: 5px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
   font-size: 1.2rem !important;
   border: 2px solid;
-  border-radius: 5px;
-  background-color: rgba(152, 152, 152, 0.4);
 }
 
 .audio-player img {
@@ -294,6 +211,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 4vh;
@@ -303,8 +222,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 9.5vh;
-  background-color: white;
+  height: 120px;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -312,88 +230,117 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 3%;
+  background-color: white;
+  gap: 40px;
 }
 
-.social a {
-  height: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.social a img {
-  height: 65%;
+.social img {
+  height: 48px;
   width: auto;
 }
 
 .prox-conciertos {
   background-color: white;
-  padding: 2%;
   width: 50%;
-}
-
-.prox-conciertos .concierto-header {
-  height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 5vh;
+}
+
+.prox-conciertos .concierto-header {
+  margin: 1% auto;
+  width: 90%;
+  max-width: 450px;
+}
+
+.prox-conciertos .concierto-header h2 {
+  margin-bottom: 8px;
 }
 
 .prox-conciertos .concierto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   width: 90%;
-  max-width: 650px;
+  max-width: 450px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 1% auto;
-  gap: 1%;
+  gap: 3%;
   margin-bottom: 1%;
 }
 
-.prox-conciertos .concierto .fecha {
-  width: 15%;
-  font-weight: 100;
+.prox-conciertos .concierto .fecha-container {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 8px 8px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 24px;
 }
 
-.prox-conciertos .concierto .recinto {
-  margin-left: 0;
-  margin-right: auto;
+.prox-conciertos .concierto .fecha-container .fecha {
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.prox-conciertos .concierto .ciudad {
+.prox-conciertos .concierto .locacion .recinto {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.prox-conciertos .concierto .locacion .ciudad {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline;
   font-weight: 300;
 }
 
 .prensa {
   background-color: white;
   width: 50%;
-  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 5vh;
 }
 
 .prensa h2 {
-  line-height: 8vh;
+  margin-bottom: 8px;
+  width: 90%;
+  max-width: 600px;
 }
 
 .prensa a {
-  margin: 3% 0;
-  display: block;
+  width: 90%;
+  max-width: 600px;
+  line-height: 24px;
+  margin: 8px;
+  text-decoration: underline !important;
 }
 
 @media (max-width: 600px) {
@@ -403,7 +350,7 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .home-info div {
+  .home-info .prox-conciertos, .home-info .prensa {
     width: 100%;
   }
 }
@@ -754,7 +701,7 @@ header {
 }
 
 .App {
-  font-family: 'Epilogue';
+  font-family: 'Manrope';
   position: relative;
 }
 

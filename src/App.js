@@ -94,8 +94,6 @@ useEffect(()=>{
             const getProyectos = data.filter(item=> item.sys.contentType.sys.id==="proyecto").sort(function(a,b){return a.fields.index - b.fields.index;});
             setProyectos(getProyectos);
 
-            console.log(getProyectos)
-
             const docen = data.filter(item=> item.sys.contentType.sys.id==="docencia")[0].fields.textoDocencia;
             setDocencia(docen);
             

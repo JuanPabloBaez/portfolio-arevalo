@@ -7,7 +7,7 @@
 }
 header{
    width: 100%;
-   height: 80vh; 
+   height: calc(100vh - 120px); 
    position: relative;
    display: flex;
    justify-content: center;
@@ -16,29 +16,35 @@ header{
 .home-first{
     width: 100%;
     height: 100%;
+    padding: 7vh 0;;
+    background-color: rgba(0, 0, 0, .4);
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     z-index: 5;
+    
 }
 .home-logo{
     width: 90%;
+    max-height: 80%;
     max-width: 800px;
-    filter: drop-shadow( 0 0 3px rgba(0, 0, 0, .3));
+    object-fit: contain;
+
+    
+    
 }
 .audio-player {
     width: 800px !important;
-    max-width: 90%;
+    max-width: 95%;
     margin-top: 2%;
-    padding: .3rem;
+    padding: 1% 2%;
     gap: 5px;
     filter: invert(100%);
     font-size: 1.2rem !important;
     border: 2px solid;
-    border-radius: 5px;
-    background-color: rgba(152, 152, 152, 0.4);
+   
     img{
         height: 2rem !important;
     }
@@ -65,62 +71,77 @@ header{
     height: fit-content;
     width: 100%;
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    padding-bottom: 4vh;
-   
+    padding-bottom: 4vh; 
 }
 .social{
     display: flex;
-    height: 9.5vh;
-    background-color: white;
+    height: 120px;
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 3%;
-    
-    
-    a{
-        height: inherit;
-        display: flex;
-        align-items: center;
-        img{
-            height: 65%;
-            width: auto;
-        }
+    background-color: white;
+    gap: 40px;
+    img{
+        height: 48px;
+        width: auto;
     }
 }
 .prox-conciertos{
     background-color: white;
-    padding: 2%;
     width: 50%;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 5vh;
     .concierto-header{
-        height: 8vh;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 5px;
+        margin: 1% auto;
+        width: 90%;
+        max-width: 450px;
+        h2{
+            margin-bottom: 8px;
+        }
+        
     }
     .concierto{
         display: flex;
-        justify-content: space-around;
         width: 90%;
-        max-width: 650px;
+        max-width: 450px;
+        height: fit-content;
         margin: 1% auto;
-        gap: 1%;
+        gap: 3%;
         margin-bottom: 1%;
-        .fecha{
-            width: 15%;
-            font-weight: 100;
-        }
-        .recinto{
-            margin-left: 0;
-            margin-right: auto;
-        }
-        .ciudad{
+        //border: 1px solid green;
+        .fecha-container{
+            display: inline-block;
+            border: 1px solid black;
+            padding: 8px 8px;
+            
+            text-align: center ;
             font-weight: 300;
+            line-height: 24px;
+            .fecha{
+                font-size: 1.3rem;
+                font-weight: 500;
+                width: fit-content;
+            }
         }
+        .locacion{
+            .recinto{
+                height: fit-content;
+                display:block;
+                margin: 8px 0;
+                font-weight: 500;
+            }
+            .ciudad{
+                height: fit-content;
+                display: inline;
+                font-weight: 300;      
+              }
+
+        }
+        
     }
 }
 
@@ -128,21 +149,30 @@ header{
 .prensa{
     background-color: white;
     width: 50%;
-    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5vh;
     
+
     h2{
-        line-height: 8vh;
+        margin-bottom: 8px;
+        width: 90%;
+        max-width: 600px;
     }
     a{
-        margin: 3% 0;
-        display: block;
+        width: 90%;
+        max-width: 600px;
+        line-height: 24px;
+        margin: 8px;
+        text-decoration: underline !important;
     }
 }
 
 @media (max-width: 600px) { 
     .home-info{
         flex-direction: column;
-        div{
+        .prox-conciertos, .prensa{
             width: 100%;
         }
     }    

@@ -13,10 +13,10 @@ function Nav() {
     <div className='nav-bar'>
       <Link to="/"><img className='logo' src={darkMode===false? "/logo-nav-white.svg":"/logo-nav.svg"} alt="logo navegación" /></Link>
       <div className={darkMode===true? 'nav-links dark':'nav-links'}>
-        <Link to="/bio">BIO</Link>
-        <Link to="/musica">MUSICA</Link>
-        <Link to="/docencia">DOCENCIA</Link>
-        <Link to="/galeria">GALERIA</Link>
+        <Link to="/bio">Bio</Link>
+        <Link to="/musica">Música</Link>
+        <Link to="/docencia">Docencia</Link>
+        <Link to="/galeria">Galeria</Link>
       </div>
     </div>
   )

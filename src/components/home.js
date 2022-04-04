@@ -73,12 +73,24 @@ function Home() {
           </div>
           
         { conciertoLista.length ? conciertoLista.map((item, index)=>{
-            let newDate = new Date(item.fields.fecha).toLocaleString( "es-ES" , { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+          
+            let dia = new Date(item.fields.fecha).toLocaleString( "es-ES" , { weekday: 'long' });
+            let fecha = new Date(item.fields.fecha).toLocaleString( "es-ES" , { month: 'short', day: 'numeric' });
+            let hora = new Date(item.fields.fecha).toLocaleTimeString([],{ hour: '2-digit', minute: '2-digit' });
+            
+          console.log(hora)
+            
             return(
             <div className='concierto' key={index}>
-              <p className='fecha'>{newDate.toUpperCase()}</p>
-              <p className='recinto'>{item.fields.recinto}</p>
-              <p className='ciudad'>{item.fields.ciudad}</p>
+              <div className='fecha-container'>
+                <p className='dia'>{dia}</p>
+                <p className='fecha'>{fecha}</p>
+                <p className='hora'>{hora}</p>
+              </div>
+              <div className='locacion'>
+                <p className='recinto'>{item.fields.recinto}</p>
+                <p className='ciudad'>{item.fields.ciudad}</p>
+              </div>
             </div>
             )
           }) : <p>Proximamente nuevas fechas</p>

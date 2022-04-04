@@ -77,15 +77,22 @@
     max-width: 1000px;
     height: fit-content;
     margin: 5% 0;
-    .swiper-slide{
-        height: 100%;
-        width: 100%;
-        img{
-            object-fit: contain;
+    display: flex;
+    .swiper-wrapper{
+        display: flex;
+        align-items: center;
+        .swiper-slide{
             height: 100%;
             width: 100%;
+            
+            img{
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+            }
         }
     }
+    
 }
 .disco-proyecto{
     width: 80% !important;
@@ -94,6 +101,7 @@
     margin: 4% auto;
     iframe{
        object-fit: contain;
+       height: 100%;
     }
 }
 

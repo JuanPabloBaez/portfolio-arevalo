@@ -624,14 +624,26 @@ header {
   height: -moz-fit-content;
   height: fit-content;
   margin: 5% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.slider-proyecto .swiper-slide {
+.slider-proyecto .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider-proyecto .swiper-wrapper .swiper-slide {
   height: 100%;
   width: 100%;
 }
 
-.slider-proyecto .swiper-slide img {
+.slider-proyecto .swiper-wrapper .swiper-slide img {
   -o-object-fit: contain;
      object-fit: contain;
   height: 100%;
@@ -650,6 +662,7 @@ header {
 .disco-proyecto iframe {
   -o-object-fit: contain;
      object-fit: contain;
+  height: 100%;
 }
 
 @media screen and (max-width: 600px) {

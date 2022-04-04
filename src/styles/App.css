@@ -572,6 +572,7 @@ header {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  padding-bottom: 8vh;
 }
 
 .proyecto-header {

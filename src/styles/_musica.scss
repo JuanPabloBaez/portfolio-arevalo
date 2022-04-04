@@ -94,12 +94,10 @@
 .disco-proyecto{
     width: 80% !important;
     max-width: 600px;
+    max-height: 35vh;
     
     margin: 4% auto;
-    iframe{
-       object-fit: contain;
-       height: 100%;
-    }
+   
 }
 
 @media screen and (max-width: 600px) { 

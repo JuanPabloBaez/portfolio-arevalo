@@ -661,13 +661,8 @@ header {
 .disco-proyecto {
   width: 80% !important;
   max-width: 600px;
+  max-height: 35vh;
   margin: 4% auto;
-}
-
-.disco-proyecto iframe {
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -727,6 +722,10 @@ header {
   height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto 8vh auto;
+}
+
+.video-container .video-player {
+  width: 100% !important;
 }
 
 .video-container p {

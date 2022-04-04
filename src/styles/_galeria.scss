@@ -27,6 +27,9 @@
     max-width: 700px;
     height: fit-content;
     margin: 0 auto 8vh auto;
+    .video-player{
+        width: 100% !important;
+    }
     p{
         color: white;
         margin: 1%

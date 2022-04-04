@@ -45,7 +45,6 @@ function Galeria() {
           <ReactPlayer
           className='video-player'
           url={item.link}
-          
           config={{
             youtube: {
               playerVars: { showinfo: 1  }

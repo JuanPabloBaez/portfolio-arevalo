@@ -653,9 +653,9 @@ header {
 .disco-proyecto {
   width: 80% !important;
   max-width: 600px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
   margin: 4% auto;
 }
 

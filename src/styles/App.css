@@ -620,8 +620,10 @@ header {
 .slider-proyecto {
   width: 90%;
   max-width: 1000px;
-  height: 55vh;
-  margin: 3% 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 5% 0;
 }
 
 .slider-proyecto .swiper-slide {

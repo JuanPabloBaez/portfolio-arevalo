@@ -33,6 +33,7 @@
 .proyecto-body{
     width: 100%;
     max-width: 1000px;
+    height: fit-content;
 }
 .proyecto-header{
     margin: 0 auto;
@@ -49,6 +50,8 @@
         text-align: justify;
         margin: 1.5% 0;
         line-height: 1.2rem;
+        margin-left: 0;
+        margin-right: auto;
     }
 }
 

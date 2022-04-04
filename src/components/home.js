@@ -75,7 +75,7 @@ function Home() {
         { conciertoLista.length ? conciertoLista.map((item, index)=>{
           
             let dia = new Date(item.fields.fecha).toLocaleString( "es-ES" , { weekday: 'long' });
-            let fecha = new Date(item.fields.fecha).toLocaleString( "es-ES" , { month: 'short', day: 'numeric' });
+            let fecha = new Date(item.fields.fecha).toLocaleString( "es-ES" , { month: 'short', day: 'numeric' }).toLocaleUpperCase();
             let hora = new Date(item.fields.fecha).toLocaleTimeString([],{ hour: '2-digit', minute: '2-digit' });
             
           console.log(hora)
@@ -96,16 +96,16 @@ function Home() {
           }) : <p>Proximamente nuevas fechas</p>
         }
         </div>
-        <div className='prensa'>
+        <ul className='prensa'>
           <h2>Prensa</h2>
           {
             prensaLista.map((item, index)=>{
               
-              return( <a href={item.fields.link} target="_blank"  rel="noreferrer" key={index} > 	&bull;   {item.fields.titulo} </a>)
+              return( <li> <a href={item.fields.link} target="_blank"  rel="noreferrer" key={index} > {item.fields.titulo} </a></li>)
              
             })
           }
-        </div>
+        </ul>
       </div>
 
 

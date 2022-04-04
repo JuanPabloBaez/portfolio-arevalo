@@ -3,8 +3,10 @@
    
     width: 90%;
     max-width: 900px;
+    min-height: 100vh;
+    height: fit-content;
     margin: 0 auto;
-    padding: 8vh 3%;
+    padding: 8vh 0;
     
     h1{
         margin: 3% 2%;

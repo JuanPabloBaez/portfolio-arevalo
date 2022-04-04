@@ -110,7 +110,7 @@
 
 @media screen and (max-width: 600px) {
   .nav-links a {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
   }
 }
 
@@ -231,11 +231,11 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  gap: 40px;
+  gap: 32px;
 }
 
 .social img {
-  height: 48px;
+  height: 40px;
   width: auto;
 }
 
@@ -289,7 +289,7 @@ header {
 }
 
 .prox-conciertos .concierto .fecha-container .fecha {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -323,10 +323,12 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 32px;
   padding-bottom: 5vh;
+  gap: 16px;
 }
 
 .prensa h2 {
@@ -339,7 +341,6 @@ header {
   width: 90%;
   max-width: 600px;
   line-height: 24px;
-  margin: 8px;
   text-decoration: underline !important;
 }
 
@@ -360,6 +361,9 @@ header {
   width: -moz-fit-content;
   width: fit-content;
   max-width: 900px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0 auto;
   padding: 8vh 3%;
 }
@@ -446,8 +450,12 @@ header {
 .docencia-body {
   width: 90%;
   max-width: 900px;
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0 auto;
-  padding: 8vh 3%;
+  padding: 8vh 0;
 }
 
 .docencia-body h1 {
@@ -554,6 +562,9 @@ header {
 .proyecto-body {
   width: 100%;
   max-width: 1000px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .proyecto-header {
@@ -575,6 +586,8 @@ header {
   text-align: justify;
   margin: 1.5% 0;
   line-height: 1.2rem;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .links-proyecto {

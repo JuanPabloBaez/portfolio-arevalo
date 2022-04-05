@@ -93,19 +93,22 @@ function Home() {
               </div>
             </div>
             )
-          }) : <p>Próximamente nuevas fechas</p>
+          }) : <p>Pronto nuevas fechas</p>
         }
         </div>
-        <ul className='prensa'>
+        <div className='prensa'>
           <h2>Prensa</h2>
-          {
-            prensaLista.map((item, index)=>{
+          <ul >
+            
+            {
+              prensaLista.map((item, index)=>{
+                
+                return( <li> <a href={item.fields.link} target="_blank"  rel="noreferrer" key={index} > {item.fields.titulo} </a></li>)
               
-              return( <li> <a href={item.fields.link} target="_blank"  rel="noreferrer" key={index} > {item.fields.titulo} </a></li>)
-             
-            })
-          }
-        </ul>
+              })
+            }
+          </ul>
+        </div>
       </div>
 
 

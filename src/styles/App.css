@@ -333,9 +333,8 @@ header {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0 32px;
+  padding: 0 16px;
   padding-bottom: 5vh;
-  gap: 16px;
 }
 
 .prensa h2 {
@@ -344,7 +343,12 @@ header {
   max-width: 600px;
 }
 
-.prensa a {
+.prensa li {
+  margin: 16px 0;
+  list-style-position: inside;
+}
+
+.prensa li a {
   width: 90%;
   max-width: 600px;
   line-height: 24px;

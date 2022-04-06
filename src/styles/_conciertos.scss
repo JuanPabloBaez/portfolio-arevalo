@@ -1,26 +1,29 @@
 
 .conciertos-body{
-    padding-top: 7vh;
+    padding: 8vh 0;
     background-color: black;
     color:white;
     min-height: 100vh;
+    height: fit-content;
     h2{
-        margin: 4% 5%;
+        width: 95%;
+        max-width: 900px;
+        margin: 40px auto;
     }
 }
 .lista-conciertos {
     
     width: 95%;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     .concierto{
         display: flex;
-        justify-content: space-around;
         margin-bottom: 2% ;
-        gap: 1%;
+        gap: 3%;
         .fecha{
-            width: 20%;
             font-weight: 100;
+            width: 63px;
+            font-size: .9rem;
         }
         .recinto{
             margin-left: 0;

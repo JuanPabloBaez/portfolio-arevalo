@@ -45,6 +45,7 @@
         max-width: 60%;
         float: left;
         padding: 1%;
+        border: none;
     }
     p {
         text-align: justify;
@@ -79,6 +80,7 @@
     .swiper-wrapper{
         display: flex;
         align-items: center;
+        height: 45vh !important;
         .swiper-slide{
             height: 100%;
             width: 100%;
@@ -94,7 +96,7 @@
 .disco-proyecto{
     width: 80% !important;
     max-width: 600px;
-    max-height: 35vh;
+    max-height: 40vh;
     
     margin: 4% auto;
    

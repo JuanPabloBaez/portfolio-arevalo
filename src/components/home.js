@@ -78,7 +78,7 @@ function Home() {
             let fecha = new Date(item.fields.fecha).toLocaleString( "es-ES" , { month: 'short', day: 'numeric' }).toLocaleUpperCase();
             let hora = new Date(item.fields.fecha).toLocaleTimeString([],{ hour: '2-digit', minute: '2-digit' });
             
-          console.log(hora)
+        
             
             return(
             <div className='concierto' key={index}>

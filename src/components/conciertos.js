@@ -6,7 +6,7 @@ import {conciertoState, darkState} from '../App.js';
 function Conciertos() {
   const [ ,setDark] = useRecoilState(darkState);
   const listaConciertos = useRecoilValue(conciertoState);
-  
+  window.scrollTo(0, 0);
   useEffect( ()=>{
     setDark(false);
     return

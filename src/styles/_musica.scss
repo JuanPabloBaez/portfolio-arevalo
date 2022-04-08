@@ -10,7 +10,7 @@
     align-items: center;
 }
 .button-panel{
-    height: 6vh;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@
         margin: 2% 0;
     }
     img{
-        max-width: 60%;
+        max-width: 50%;
         float: left;
         padding: 1%;
         border: none;
@@ -112,6 +112,9 @@
         img {
             float: none;
         }
+    }
+    .button-panel button{
+        font-size: .95rem;
     }
 
 }

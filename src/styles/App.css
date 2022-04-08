@@ -235,7 +235,7 @@ header {
 }
 
 .social img {
-  height: 40px;
+  height: 48px;
   width: auto;
 }
 
@@ -367,6 +367,12 @@ header {
   .home-info .prox-conciertos, .home-info .prensa {
     width: 100%;
   }
+  .social {
+    gap: 24px;
+  }
+  .social img {
+    height: 40px;
+  }
 }
 
 .bio-body {
@@ -424,7 +430,7 @@ header {
 }
 
 .conciertos-body {
-  padding: 8vh 0;
+  padding: 8vh 2%;
   background-color: black;
   color: white;
   min-height: 100vh;
@@ -443,25 +449,50 @@ header {
   width: 95%;
   max-width: 900px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
 }
 
 .lista-conciertos .concierto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 2%;
+  font-size: 1.1rem;
   gap: 3%;
 }
 
 .lista-conciertos .concierto .fecha {
   font-weight: 100;
-  width: 63px;
-  font-size: .9rem;
+  width: 65px;
+  min-width: 65px;
+  font-size: .85rem;
 }
 
 .lista-conciertos .concierto .recinto {
   margin-left: 0;
   margin-right: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: left;
+}
+
+.lista-conciertos .concierto .ciudad {
+  text-align: left;
+  width: 85px;
+  min-width: 85px;
+}
+
+@media screen and (max-width: 600px) {
+  .recinto, .ciudad {
+    font-size: .95rem;
+  }
 }
 
 .docencia-body {
@@ -547,7 +578,7 @@ header {
 }
 
 .button-panel {
-  height: 6vh;
+  height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,7 +626,7 @@ header {
 }
 
 .proyecto-header img {
-  max-width: 60%;
+  max-width: 50%;
   float: left;
   padding: 1%;
   border: none;
@@ -695,6 +726,9 @@ header {
   }
   .proyecto-header img {
     float: none;
+  }
+  .button-panel button {
+    font-size: .95rem;
   }
 }
 

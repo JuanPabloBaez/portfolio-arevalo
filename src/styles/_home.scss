@@ -84,7 +84,7 @@ header{
     background-color: white;
     gap: 32px;
     img{
-        height: 40px;
+        height: 48px;
         width: auto;
     }
 }
@@ -184,6 +184,12 @@ header{
         flex-direction: column;
         .prox-conciertos, .prensa{
             width: 100%;
+        }
+    }
+    .social{
+        gap: 24px;
+        img{
+            height: 40px;
         }
     }    
 

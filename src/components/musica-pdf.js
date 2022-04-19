@@ -18,7 +18,8 @@ function Partitura({item, index}) {
     changePage(-1)
     }
 
-    function changePageNext(){
+    function changePageNext(e){
+    e.preventDefault();
     changePage(+1)
     }
     

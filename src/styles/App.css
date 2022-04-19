@@ -726,6 +726,7 @@ header {
 
 .partitura a {
   margin-left: 0;
+  z-index: 3;
 }
 
 .partitura .react-pdf__Document {

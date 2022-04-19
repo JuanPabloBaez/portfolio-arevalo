@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react'
 import {useRecoilState, useRecoilValueLoadable} from 'recoil';
 import {darkState, proyectoState} from '../App.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore,{  Navigation} from "swiper";
-
+import SwiperCore,{Navigation} from "swiper";
 import RichText from '@madebyconnor/rich-text-to-jsx';
 import { BLOCKS } from '@contentful/rich-text-types';
 import ReactPlayer from 'react-player/lazy';
 import 'swiper/css';
 import "swiper/css/effect-fade";
 
+import Partitura from "./musica-pdf"
 import FacebookLogo from "../assets/icons/facebook.svg";
 import InstaLogo from "../assets/icons/instagram.svg";
 import SpotifyLogo from "../assets/icons/spotify.svg";
@@ -23,6 +23,9 @@ function Musica() {
   const [, setDark] = useRecoilState(darkState);
   const { contents} = useRecoilValueLoadable(proyectoState);
   const [proyectoIndex, setProyectoIndex] = useState(0);
+
+
+ 
 
   useEffect( ()=>{
     async function setMusica () {
@@ -60,12 +63,13 @@ function Musica() {
                 linkInstagram,
                 linkYoutube,
                 linkSpotify,
-                linkDiscos
+                linkDiscos,
+                partituras
               } = item.fields;
             if (proyectoIndex===index){
             return(
             <>
-              <div className='proyecto-header' >
+              <div className='proyecto-header'   >
                 <h1>{nombre}</h1>
                 {logo && <img src={logo.fields.file.url} alt="proyecto logo" />}
                 <RichText 
@@ -79,6 +83,7 @@ function Musica() {
                       }
                     }}/>
               </div>
+   
               { (linkWeb||linkFacebook||linkInstagram||linkYoutube||linkSpotify)&& <div className='links-proyecto'>
                     {linkWeb &&  <a href={linkWeb} target="_blank"  rel="noreferrer"> <img src={WebLogo} alt='website'/> </a>}
                     {linkSpotify&& <a href={linkSpotify}target="_blank"  rel="noreferrer"><img src={SpotifyLogo} alt='Spotify account'/></a>}
@@ -87,6 +92,7 @@ function Musica() {
                     {linkInstagram&& <a href={linkInstagram}target="_blank"  rel="noreferrer"><img src={InstaLogo} alt='Instagram account'/></a>}
                     
               </div>}
+ 
               {fotos&& <Swiper
                 className="slider-proyecto" 
                 spaceBetween={50}
@@ -105,7 +111,6 @@ function Musica() {
                 return (<ReactPlayer key={index}
                 url={item}
                 className='disco-proyecto'
-                
                 config={{
                   soundcloud:{
                     options:{
@@ -117,6 +122,13 @@ function Musica() {
                 }}
               />)
               }) }
+
+              {partituras&& partituras.map((item,index)=>{
+                
+                return  <Partitura item={item} index={index} />
+              })}
+
+
              </>  
             )} else return null;
           

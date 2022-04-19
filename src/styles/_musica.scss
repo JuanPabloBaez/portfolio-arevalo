@@ -36,7 +36,7 @@
     padding-bottom: 8vh ;
 }
 .proyecto-header{
-    margin: 0 auto;
+    margin: 40px auto;
     max-width: 1000px;
     h1{
         margin: 2% 0;
@@ -97,9 +97,47 @@
     width: 80% !important;
     max-width: 600px;
     max-height: 40vh;
-    
     margin: 4% auto;
+}
+
+.partitura{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a{
+        margin-left: 0;
+    }
+    
+   .react-pdf__Document{
+       width: 95% !important;
+       canvas{
+           width: 100% !important;
+           max-width: 500px;
+           height: auto !important;
+           margin: 0 auto;
+       }
+   }
    
+    
+    .button-partitura{
+        display: flex;
+        height: 5vh;
+        margin: 1% 0 5% 0;
+        align-items: center;
+        gap: 16px;
+        z-index: 3;
+        button{
+            height: fit-content;
+           
+            background: none;
+            color: white;
+            border: none;
+            font-size: 2rem;
+        }
+
+    }
+    
 }
 
 @media screen and (max-width: 600px) { 

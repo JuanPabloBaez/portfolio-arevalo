@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import {client} from './client';
 import {atom,useRecoilState} from 'recoil';
@@ -68,7 +68,9 @@ useEffect(()=>{
   async function getData () {
     
     try{
-      client.getEntries()
+      client.getEntries({
+        limit: 1000
+      })
         .then(async (response)=> {
             const data = response.items;
             
@@ -88,8 +90,14 @@ useEffect(()=>{
             });
             setConciertos(getConciertos);
              
+
+
+            
             const bio = data.filter(item=> item.sys.contentType.sys.id==="biografia")[0].fields.textoBio;
             setBiografia(bio);
+           
+           
+            
 
             const getProyectos = data.filter(item=> item.sys.contentType.sys.id==="proyecto").sort(function(a,b){return a.fields.index - b.fields.index;});
             setProyectos(getProyectos);
@@ -132,7 +140,7 @@ useEffect(()=>{
       </Router>
       <footer >
         <p className={dark===true ? 'dark':null}>&copy; Alejandro Arévalo {new Date().getFullYear()}</p>
-        <p className={dark===true ? 'dark':null}>website:  <a href="http://jpbaez.com/" target="_blank" rel="noreferrer">Juan Pablo Baez</a></p>
+        <p className={dark===true ? 'dark':null}>website:  <a href="http://jpbaez.com/" target="_blank" rel="noopener noreferrer">Juan Pablo Baez</a></p>
       </footer>
 
     </div>

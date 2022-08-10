@@ -1,14 +1,14 @@
 import React, { useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { EffectFade, Autoplay, Navigation} from "swiper";
 import {useRecoilState, useRecoilValue, useRecoilValueLoadable} from 'recoil';
 import {darkState, imgState, audioState, conciertoState, prensaState} from '../App.js';
 
 import AudioPlayer from "react-modular-audio-player";
 
-import 'swiper/css';
-import "swiper/css/effect-fade";
+import 'swiper/swiper-bundle.css';
+//import "swiper/css/effect-fade";
 import HomeLogo from "../assets/logo-home-white.svg";
 import MailLogo from "../assets/icons/email.svg";
 import FacebookLogo from "../assets/icons/facebook.svg";
@@ -61,10 +61,10 @@ function Home() {
       </header>
       <div className='home-info'>
       <div className='social'>
-            <a href="mailto:conversemos@alejandroarevalo.cl" target="_blank"  rel="noreferrer"><img  src={MailLogo} alt="email de Alejandro Arévalo"/></a>
-            <a href="https://open.spotify.com/artist/3LJFVzMZewx7BoG5Cuh4N5?si=i3W01HiIToepWX5Mnl4-4Q" target="_blank"  rel="noreferrer" ><img src={SpotifyLogo} alt="Spotify de Alejandro Arévalo"/></a>
-            <a href="https://www.instagram.com/alejandro_arevalo_pianista/" target="_blank"  rel="noreferrer"><img src={InstaLogo} alt="Instagram de Alejandro Arévalo"/></a>
-            <a href="https://www.facebook.com/AlejandroArevaloMusico" target="_blank"  rel="noreferrer"><img src={FacebookLogo} alt="Facebook de Alejandro Arévalo"/></a>
+            <a href="mailto:conversemos@alejandroarevalo.cl" target="_blank"  rel="noopener noreferrer"><img  src={MailLogo} alt="email de Alejandro Arévalo"/></a>
+            <a href="https://open.spotify.com/artist/2iCkfZ75KQUM734eEtgght?si=_6PtxgcjQfKHCHhyaJGNkQ" target="_blank"  rel="noopener noreferrer" ><img src={SpotifyLogo} alt="Spotify de Alejandro Arévalo"/></a>
+            <a href="https://www.instagram.com/alejandro_arevalo_pianista/" target="_blank"  rel="noopener noreferrer"><img src={InstaLogo} alt="Instagram de Alejandro Arévalo"/></a>
+            <a href="https://www.facebook.com/AlejandroArevaloMusico" target="_blank"  rel="noopener noreferrer"><img src={FacebookLogo} alt="Facebook de Alejandro Arévalo"/></a>
         </div>
         <div className='prox-conciertos'>
           <div className='concierto-header'>
@@ -103,7 +103,7 @@ function Home() {
             {
               prensaLista.map((item, index)=>{
                 
-                return( <li> <a href={item.fields.link} target="_blank"  rel="noreferrer" key={index} > {item.fields.titulo} </a></li>)
+                return( <li> <a href={item.fields.link} target="_blank"  rel="noopener noreferrer" key={index} > {item.fields.titulo} </a></li>)
               
               })
             }

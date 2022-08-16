@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import {useRecoilState, useRecoilValueLoadable} from 'recoil';
 import {darkState, proyectoState} from '../App.js';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import SwiperCore,{Navigation} from "swiper";
 import RichText from '@madebyconnor/rich-text-to-jsx';
 import { BLOCKS } from '@contentful/rich-text-types';
 import ReactPlayer from 'react-player/lazy';
-import 'swiper/css';
-import "swiper/css/effect-fade";
+import 'swiper/swiper-bundle.css';
+//import "swiper/css/effect-fade";
 
-import Partitura from "./musica-pdf"
+//import Partitura from "./musica-pdf"
 import FacebookLogo from "../assets/icons/facebook.svg";
 import InstaLogo from "../assets/icons/instagram.svg";
 import SpotifyLogo from "../assets/icons/spotify.svg";
@@ -64,12 +64,13 @@ function Musica() {
                 linkYoutube,
                 linkSpotify,
                 linkDiscos,
-                partituras
+                //partituras
               } = item.fields;
             if (proyectoIndex===index){
+              
             return(
             <>
-              <div className='proyecto-header'   >
+              <div className='proyecto-header'  >
                 <h1>{nombre}</h1>
                 {logo && <img src={logo.fields.file.url} alt="proyecto logo" />}
                 <RichText 
@@ -85,11 +86,11 @@ function Musica() {
               </div>
    
               { (linkWeb||linkFacebook||linkInstagram||linkYoutube||linkSpotify)&& <div className='links-proyecto'>
-                    {linkWeb &&  <a href={linkWeb} target="_blank"  rel="noreferrer"> <img src={WebLogo} alt='website'/> </a>}
-                    {linkSpotify&& <a href={linkSpotify}target="_blank"  rel="noreferrer"><img src={SpotifyLogo} alt='Spotify account'/></a>}
-                    {linkYoutube&& <a href={linkYoutube}target="_blank"  rel="noreferrer"><img src={YoutubeLogo} alt='Youtube channel'/></a>}
-                    {linkFacebook&& <a href={linkFacebook}target="_blank"  rel="noreferrer"><img src={FacebookLogo} alt='Facebook page'/></a>}
-                    {linkInstagram&& <a href={linkInstagram}target="_blank"  rel="noreferrer"><img src={InstaLogo} alt='Instagram account'/></a>}
+                    {linkWeb &&  <a href={linkWeb} target="_blank"  rel="noopener noreferrer"> <img src={WebLogo} alt='website'/> </a>}
+                    {linkSpotify&& <a href={linkSpotify}target="_blank"  rel="noopener noreferrer"><img src={SpotifyLogo} alt='Spotify account'/></a>}
+                    {linkYoutube&& <a href={linkYoutube}target="_blank"  rel="noopener noreferrer"><img src={YoutubeLogo} alt='Youtube channel'/></a>}
+                    {linkFacebook&& <a href={linkFacebook}target="_blank"  rel="noopener noreferrer"><img src={FacebookLogo} alt='Facebook page'/></a>}
+                    {linkInstagram&& <a href={linkInstagram}target="_blank"  rel="noopener noreferrer"><img src={InstaLogo} alt='Instagram account'/></a>}
                     
               </div>}
  
@@ -123,10 +124,10 @@ function Musica() {
               />)
               }) }
 
-              {partituras&& partituras.map((item,index)=>{
+              {/* {partituras&& partituras.map((item,index)=>{
                 
                 return  <Partitura item={item} index={index} />
-              })}
+              })} */}
 
 
              </>  

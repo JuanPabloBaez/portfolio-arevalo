@@ -62,7 +62,7 @@ function Home() {
       <div className='home-info'>
       <div className='social'>
             <a href="mailto:conversemos@alejandroarevalo.cl" target="_blank"  rel="noopener noreferrer"><img  src={MailLogo} alt="email de Alejandro Arévalo"/></a>
-            <a href="https://open.spotify.com/artist/2iCkfZ75KQUM734eEtgght?si=_6PtxgcjQfKHCHhyaJGNkQ" target="_blank"  rel="noopener noreferrer" ><img src={SpotifyLogo} alt="Spotify de Alejandro Arévalo"/></a>
+            <a href="https://open.spotify.com/artist/2iCkfZ75KQUM734eEtgght?si=Tpo3kP9jS3SMd_SI0-T4FQ" target="_blank"  rel="noopener noreferrer" ><img src={SpotifyLogo} alt="Spotify de Alejandro Arévalo"/></a>
             <a href="https://www.instagram.com/alejandro_arevalo_pianista/" target="_blank"  rel="noopener noreferrer"><img src={InstaLogo} alt="Instagram de Alejandro Arévalo"/></a>
             <a href="https://www.facebook.com/AlejandroArevaloMusico" target="_blank"  rel="noopener noreferrer"><img src={FacebookLogo} alt="Facebook de Alejandro Arévalo"/></a>
         </div>

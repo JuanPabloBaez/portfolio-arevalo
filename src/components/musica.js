@@ -9,7 +9,7 @@ import ReactPlayer from 'react-player/lazy';
 import 'swiper/css';
 import "swiper/css/effect-fade";
 
-//import Partitura from "./musica-pdf"
+import Partitura from "./musica-pdf"
 import FacebookLogo from "../assets/icons/facebook.svg";
 import InstaLogo from "../assets/icons/instagram.svg";
 import SpotifyLogo from "../assets/icons/spotify.svg";
@@ -64,7 +64,7 @@ function Musica() {
                 linkYoutube,
                 linkSpotify,
                 linkDiscos,
-                //partituras
+                partituras
               } = item.fields;
             if (proyectoIndex===index){
               
@@ -124,10 +124,10 @@ function Musica() {
               />)
               }) }
 
-              {/* {partituras&& partituras.map((item,index)=>{
+              {partituras&& partituras.map((item,index)=>{
                 
                 return  <Partitura item={item} index={index} />
-              })} */}
+              })}
 
 
              </>  

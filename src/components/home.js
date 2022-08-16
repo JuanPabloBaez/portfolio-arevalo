@@ -1,14 +1,14 @@
 import React, { useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Navigation} from "swiper";
 import {useRecoilState, useRecoilValue, useRecoilValueLoadable} from 'recoil';
 import {darkState, imgState, audioState, conciertoState, prensaState} from '../App.js';
 
 import AudioPlayer from "react-modular-audio-player";
 
-import 'swiper/swiper-bundle.css';
-//import "swiper/css/effect-fade";
+import 'swiper/css';
+import "swiper/css/effect-fade";
 import HomeLogo from "../assets/logo-home-white.svg";
 import MailLogo from "../assets/icons/email.svg";
 import FacebookLogo from "../assets/icons/facebook.svg";

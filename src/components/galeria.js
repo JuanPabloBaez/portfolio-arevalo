@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import {useRecoilState, useRecoilValue} from 'recoil';
 import {darkState, imgState, videoState} from '../App.js';
 import ReactPlayer from 'react-player';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import 'swiper/swiper-bundle.css';
-//import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import "swiper/css/navigation";
 
 
 function Galeria() {

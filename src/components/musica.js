@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import {useRecoilState, useRecoilValueLoadable} from 'recoil';
 import {darkState, proyectoState} from '../App.js';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore,{Navigation} from "swiper";
 import RichText from '@madebyconnor/rich-text-to-jsx';
 import { BLOCKS } from '@contentful/rich-text-types';
 import ReactPlayer from 'react-player/lazy';
-import 'swiper/swiper-bundle.css';
-//import "swiper/css/effect-fade";
+import 'swiper/css';
+import "swiper/css/effect-fade";
 
 //import Partitura from "./musica-pdf"
 import FacebookLogo from "../assets/icons/facebook.svg";
